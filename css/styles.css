@@ -12,3 +12,12 @@
     height: 350px;
     background-color: lightgray;
 }
+li{
+    display: inline;
+    justify-content: space-between;
+    color: white;
+    font-weight: 300;
+    font-size: 18px;
+    margin-right: 10px;
+   
+}
