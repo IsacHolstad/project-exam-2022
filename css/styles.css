@@ -37,11 +37,12 @@ li{
 }
 input{
     margin-top: 12px;
-    width: 250px;
+    width: 350px;
     height: 25px;
     border-radius: 20px;
     border: 1px solid black;
     text-align: right;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
 }
 .blog-posts{
     width: 100%;
