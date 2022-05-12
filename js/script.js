@@ -33,4 +33,6 @@ async function blogResults() {
 }
 blogResults()
 
+console.log(Math.PI)
+
 
