@@ -1,3 +1,12 @@
+const queryString = document.location.search;
+const params = new URLSearchParams(queryString);
+const id = params.get('id');
+//
+//
+//
+//
+
+
 const myAPI = "http://isacblog.flywheelsites.com/wp-json";
 //console.log(myAPI);
 const proxy = "https://noroffcors.herokuapp.com/";
