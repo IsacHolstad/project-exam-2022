@@ -7,6 +7,9 @@
     width: 100%;
     background-color: #1fab89;
 }
+.home{
+    text-decoration: underline;
+}
 .carusel-container{
     width: 100%;
     height: 350px;
