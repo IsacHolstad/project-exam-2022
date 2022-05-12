@@ -9,4 +9,28 @@ const proxy = "https://noroffcors.herokuapp.com/";
 const corsFixUrl = proxy + myAPI; 
 console.log(corsFixUrl)
 
-const blogPosts = document.querySelector(".blog-posts")
+const blogPost = document.querySelector(".blog-posts");
+const caruselPost = document.querySelector(".carusel-container")
+////
+////
+async function blogResults() {
+    try{
+        const response = await fetch(corsFixUrl);
+        console.log(response);
+        const responseJSON = await response.json();
+        console.log(responseJSON);
+        const blogInfo = responseJSON.results;
+        console.log();
+        for (let i = 0; i < responseJSON.length; i++) {
+            console.log(responseJSON[i].title)
+            caruselPost.innerHTML += `<div>${responseJSON[i].title.rendered}</div>`
+        }
+
+    }
+    catch(error) {
+        caruselPost.innerHTML += `<center><h2>error</h2></center>`;
+    }
+}
+blogResults()
+
+
