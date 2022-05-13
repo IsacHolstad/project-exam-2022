@@ -26,7 +26,7 @@ async function blogResults() {
             if (i === 8) {
                 break
             }
-            caruselPost.innerHTML += `<div>${responseJSON[i].title.rendered}</div>`
+            caruselPost.innerHTML += `<div><a href="detail.html?id=${responseJSON[i].id}">${responseJSON[i].slug}</div>`
         }
 
     }
