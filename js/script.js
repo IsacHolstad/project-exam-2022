@@ -18,7 +18,7 @@ async function blogResults() {
         const response = await fetch(corsFixUrl);
         console.log(response);
         const responseJSON = await response.json();
-        console.log(responseJSON);
+        ////console.log(responseJSON);
         const blogInfo = responseJSON.results;
         console.log();
         for (let i = 0; i < responseJSON.length; i++) {
