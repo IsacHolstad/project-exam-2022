@@ -22,7 +22,10 @@ async function blogResults() {
         const blogInfo = responseJSON.results;
         console.log();
         for (let i = 0; i < responseJSON.length; i++) {
-            console.log(responseJSON[i].title)
+            console.log(responseJSON[i])
+            if (i === 8) {
+                break
+            }
             caruselPost.innerHTML += `<div>${responseJSON[i].title.rendered}</div>`
         }
 

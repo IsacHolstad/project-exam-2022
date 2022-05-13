@@ -54,3 +54,14 @@ input{
     height: 200px;
     background-color: black;
 }
+@media  screen and (min-width: 200px) and (max-width: 299px) {
+    input{
+        width: 150px;
+    }
+    
+}
+@media screen and (min-width: 300px) and (max-width: 430px) {
+    input{
+        width: 250px;
+    }
+}
