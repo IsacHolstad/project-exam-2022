@@ -26,12 +26,12 @@ async function blogResults() {
             if (i === 8) {
                 break
             }
-            caruselPost.innerHTML += `<div><a href="detail.html?id=${responseJSON[i].id}">${responseJSON[i].slug}</div>`
+            blogPost.innerHTML += `<div><a href="detail.html?id=${responseJSON[i].id}">${responseJSON[i].slug}</div>`
         }
 
     }
     catch(error) {
-        caruselPost.innerHTML += `<center><h2>error</h2></center>`;
+        blogPost.innerHTML += `<center><h2>error</h2></center>`;
     }
 }
 blogResults()
