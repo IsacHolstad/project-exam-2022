@@ -2,9 +2,14 @@
     margin: 0 auto;
     padding: 0 auto;
 }
+a{
+  color: white;
+}
+a:hover{
+  text-decoration: underline;
+}
 .header {
-    background-color: transparent;
-   
+  background-color: #1fab89;
     position: relative;
     width: 100%;
     z-index: 3;
@@ -14,12 +19,11 @@
     padding: 0%;
     list-style: none;
     overflow: hidden;
-    background-color: rgb(10, 54, 65);
+    background-color: transparent;
   }
   .header ul a {
     display: block;
     padding: 20px;
-    border-right: 1px solid rgb(10, 54, 65);
     text-decoration: none;
   }
   
@@ -85,7 +89,7 @@
     transform: rotate(45deg);
     top: 0;
   }
-  @media screen and (min-width: 1024px) and (max-width:1400px) {
+  @media screen and (min-width: 700px) and (max-width:1400px) {
     .header li {
         float: left;
       }
@@ -96,8 +100,17 @@
         clear: none;
         float: right;
         max-height: none;
+        background-color: #1fab89;
+        width: 100%;
+       position: absolute;
+       top: 0%;
+       text-align: right;
       }
       .menu-icon {
         display: none;
+      }
+      .header {
+        background-color: #1fab89;
+
       }
   }
