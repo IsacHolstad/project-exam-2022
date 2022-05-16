@@ -26,7 +26,10 @@ async function blogResults() {
             if (i === 8) {
                 break
             }
-            blogPost.innerHTML += `<div><a href="detail.html?id=${responseJSON[i].id}">${responseJSON[i].slug}</div>`
+            blogPost.innerHTML += `<div><a href="detail.html?id=${responseJSON[i].id}">
+            ${responseJSON[i].slug}
+            ${responseJSON[i].date}
+            </div>`
         }
 
     }
