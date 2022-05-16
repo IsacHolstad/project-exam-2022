@@ -26,7 +26,7 @@ async function blogResults() {
             if (i === 8) {
                 break
             }
-            blogPost.innerHTML += `<div><a href="detail.html?id=${responseJSON[i].id}">
+            blogPost.innerHTML += `<div class="postcontainer"><a href="detail.html?id=${responseJSON[i].id}">
             ${responseJSON[i].slug}
             ${responseJSON[i].date}
             </div>`

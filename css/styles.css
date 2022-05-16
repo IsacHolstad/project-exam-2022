@@ -57,6 +57,9 @@ input{
     padding-top: 45px;
     
 }
+.postcontainer{
+    padding: 15px;
+}
 .backbox-posts{
     width: 100%;
     height: 1000px;
