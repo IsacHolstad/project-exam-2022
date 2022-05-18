@@ -99,7 +99,7 @@ a:hover{
   }
   @media screen and (min-width: 700px) and (max-width:1400px) {
     .header li {
-        float: left;
+        float: right;
       }
       .header li a {
         padding: 20px 30px;
@@ -120,5 +120,6 @@ a:hover{
         background-color: #1fab89;
 
       }
+      
      
   }
