@@ -6,15 +6,19 @@
 a{
   color: white;
 }
+
 .logo{
   width: 40px;
+}
+.about{
+  text-decoration: underline;
 }
 a:hover{
   text-decoration: underline;
 }
 .header {
   background-color: #1fab89;
-    position: relative;
+    position: absolute;
     width: 100%;
     z-index: 3;
   }
