@@ -8,12 +8,16 @@ a{
 }
 .logo{
   width: 40px;
+  position: absolute;
+  left: 5px;
 }
 a:hover{
   text-decoration: underline;
 }
 div.postcontainer{
     color: black;
+    padding: 15px;
+    
     
 }
 .header {
@@ -101,6 +105,12 @@ div.postcontainer{
     top: 0;
   }
   @media screen and (min-width: 700px) and (max-width:1400px) {
+    img.logo{
+      display: block;
+      position: absolute;
+      top: 50px;
+      left: 5px;
+    }
     .header li {
         float: right;
       }
@@ -123,6 +133,8 @@ div.postcontainer{
         background-color: #1fab89;
 
       }
+
+   
       
      
   }
@@ -169,16 +181,10 @@ input{
 .blog-posts{
     text-align: center;
     color: black;
-  
     font-size: 20px;
     padding-top: 45px;
     color: black;
     
-}
-.postcontainer{
-    padding: 15px;
-    color: black;
-   
 }
 .backbox-posts{
     width: 100%;
@@ -193,17 +199,8 @@ input{
     background-color: black;
 }
 
-* {
-    margin: 0 auto;
-    padding: 0 auto;
-    font-family: 'Rubik', sans-serif;
-}
-a{
-  color: white;
-}
-.logo{
-  width: 40px;
-}
+
+
 a:hover{
   text-decoration: underline;
 }
@@ -303,7 +300,7 @@ a:hover{
         float: right;
       }
       .header li a {
-        padding: 20px 30px;
+        padding: 15px 15px;
       }
       .header .menu {
         clear: none;
