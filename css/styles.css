@@ -192,17 +192,7 @@ input{
     height: 200px;
     background-color: black;
 }
-@media  screen and (min-width: 200px) and (max-width: 299px) {
-    input{
-        width: 150px;
-    }
-    
-}
-@media screen and (min-width: 300px) and (max-width: 430px) {
-    input{
-        width: 250px;
-    }
-}
+
 * {
     margin: 0 auto;
     padding: 0 auto;
@@ -219,7 +209,7 @@ a:hover{
 }
 .header {
   background-color: #1fab89;
-    position: relative;
+    position: absolute;
     width: 100%;
     z-index: 3;
   }
