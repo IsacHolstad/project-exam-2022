@@ -12,6 +12,10 @@ a{
 a:hover{
   text-decoration: underline;
 }
+div.postcontainer{
+    color: black;
+    
+}
 .header {
   background-color: #1fab89;
     position: relative;
@@ -21,10 +25,6 @@ a:hover{
   li:hover{
     text-decoration: underline;
   }
-  
-      
-  
-
   .header ul {
     margin: 0%;
     padding: 0%;
@@ -175,6 +175,7 @@ input{
 }
 .postcontainer{
     padding: 15px;
+    color: black;
    
 }
 .backbox-posts{
