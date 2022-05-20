@@ -3,6 +3,17 @@
     padding: 0 auto;
     font-family: 'Rubik', sans-serif;
 }
+/*
+TEMPERARY NON SIDPLAY STUFF
+
+*/
+p{
+  display: none;
+}
+.img-blogs{
+  width: 200px;
+  height: 200px;
+}
 
 .header {
   background-color: #1fab89;
@@ -203,7 +214,7 @@ input{
 }
 .backbox-posts{
     width: 100%;
-    height: 1400px;
+    height: 40500px;
     background-color: #D7FBEB;
     color: black;
 
