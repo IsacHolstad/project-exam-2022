@@ -43,8 +43,8 @@ async function blogResults() {
 }
 blogResults()
 
+
 let wholeResponse = [
-    [
         {
             "id": 146,
             "date": "2022-05-19T11:37:47",
@@ -1125,17 +1125,9 @@ let wholeResponse = [
                 ]
             }
         }
-    ]
-    for (let i = 0; i < wholeResponse.length; i++) {
-        let myImage = getImgSrc(wholeResponse[i].content.rendered)
-        if (myImage) { //check that the images are returning
-            console.log(myImage)
+    ];
 
-        }
-        console.log(wholeResponse[i].content.rendered)
-    }
 
-];
 console.log(wholeResponse)
 const getImgSrc = (imgStr) => {
     const div = document.createElement('div');
@@ -1145,5 +1137,13 @@ const getImgSrc = (imgStr) => {
         return img.src
     }
 };
+for (let i = 0; i < wholeResponse.length; i++) {
+    let myImage = getImgSrc(wholeResponse[i].content.rendered)
+    if (myImage) { //check that the images are returning
+        console.log(myImage)
+
+    }
+    console.log(wholeResponse[i].content.rendered)
+}
 
 
