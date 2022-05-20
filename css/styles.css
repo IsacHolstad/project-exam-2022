@@ -6,7 +6,7 @@
 
 .header {
   background-color: #1fab89;
-    position: relative;
+    position: absolute;
     width: 100%;
     z-index: 3;
   }
@@ -118,6 +118,7 @@
   li:hover{
     text-decoration: underline;
   }
+  
   @media screen and (min-width: 700px) and (max-width:1400px) {
     img.logo{
       display: block;
@@ -218,91 +219,7 @@ input{
 a:hover{
   text-decoration: underline;
 }
-.header {
-  background-color: #1fab89;
-    position: absolute;
-    width: 100%;
-    z-index: 3;
-  }
-  li:hover{
-    text-decoration: underline;
-  }
 
-  .header ul {
-    margin: 0%;
-    padding: 0%;
-    list-style: none;
-    overflow: hidden;
-    background-color: transparent;
-  }
-  .header ul a {
-    display: block;
-    padding: 20px;
-    text-decoration: none;
-  }
-  
-  .header .logo {
-    float: left;
-    display: block;
-    font-size: 2em;
-    padding: 10px 20px;
-  }
-  .header .menu {
-    clear: both;
-    max-height: 0;
-    transition: max-height 0.2s ease-out;
-  }
-  .header .menu-icon {
-    padding: 28px 20px;
-    position: relative;
-    float: right;
-    cursor: pointer;
-  }
-  .header .menu-icon .nav-icon {
-    background: rgb(255, 255, 255);
-    display: block;
-    height: 2px;
-    width: 18px;
-    position: relative;
-    transition: background 0.2s ease-out;
-  }
-  .header .menu-icon .nav-icon:before {
-    background-color: rgb(255, 255, 255);
-    content: "";
-    display: block;
-    height: 100%;
-    position: absolute;
-    width: 100%;
-    top: 5px;
-    transition: all 0.2s ease-out;
-  }
-  .header .menu-icon .nav-icon:after {
-    background-color: rgb(255, 255, 255);
-    content: "";
-    display: block;
-    height: 100%;
-    position: absolute;
-    width: 100%;
-    top: -5px;
-    transition: all 0.2s ease-out;
-  }
-  .header .menu-btn {
-    display: none;
-  }
-  .header .menu-btn:checked ~ .menu {
-    max-height: 240px;
-  }
-  .header .menu-btn:checked ~ .menu-icon .nav-icon {
-    background: transparent;
-  }
-  .header .menu-btn:checked ~ .menu-icon .nav-icon:before {
-    transform: rotate(-45deg);
-    top: 0;
-  }
-  .header .menu-btn:checked ~ .menu-icon .nav-icon:after {
-    transform: rotate(45deg);
-    top: 0;
-  }
   @media screen and (min-width: 320px) and (max-width: 480px) {
     input{
       width: 280px;
