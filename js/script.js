@@ -33,6 +33,7 @@ async function blogResults() {
             ${responseJSON[i].slug}
             </div>
             <h3> ${responseJSON[i].date}</h3>
+            <div><img src="${wholeResponse[i].content.rendered}"></div>
             `
         }
 
@@ -1145,5 +1146,6 @@ for (let i = 0; i < wholeResponse.length; i++) {
     }
     console.log(wholeResponse[i].content.rendered)
 }
+
 
 
