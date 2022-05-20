@@ -28,8 +28,9 @@ async function blogResults() {
             }
             blogPost.innerHTML += `<div class="postcontainer"><a href="detail.html?id=${responseJSON[i].id}">
             ${responseJSON[i].slug}
-            ${responseJSON[i].date}
-            </div>`
+            </div>
+            <h3> ${responseJSON[i].date}</h3>
+            `
         }
 
     }
