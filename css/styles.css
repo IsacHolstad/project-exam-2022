@@ -7,6 +7,13 @@
 TEMPERARY NON SIDPLAY STUFF
 
 */
+.recent-top-posts{
+  align-items: center;
+  justify-content: center;
+  
+  
+ 
+}
 p{
   display: none;
 }
@@ -250,8 +257,8 @@ ul.navigation-ul {
 }
 .carusel-container{
     width: 100%;
-    height: 350px;
-    background-color: lightgray;
+    height: 380px;
+    
 }
 li{
     display: inline;
