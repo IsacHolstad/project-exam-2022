@@ -153,11 +153,14 @@ p{
       }
       .header {
         background-color: #1fab89;
+        height: 58px;
 
       }
-      .logo{
-        margin-top: 30px;
-        position: absolute;
+      .header .logo {
+        float: left;
+        display: block;
+        font-size: 2em;
+        padding: 10px 20px;
       }
 
    
