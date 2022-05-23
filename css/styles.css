@@ -67,6 +67,14 @@ p{
 .wp-image-46{
   display: none;
 }
+.read-more-btn{
+  height: 35px;
+  width: 100px;
+  background-color: #1FAB89  ;
+  border-radius: 15px;
+  border: 0.5px;
+
+}
 h4{
   color: white;
   text-align: center;
