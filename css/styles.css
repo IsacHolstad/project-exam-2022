@@ -11,8 +11,12 @@ p{
   display: none;
 }
 .img{
-  width: 200px;
-  height: 200px;
+  height: 462px;
+width: 616px;
+left: 88px;
+top: 179px;
+border-radius: 15px;
+
 }
 
 .header {
