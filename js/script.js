@@ -26,15 +26,16 @@ async function blogResults() {
         const blogInfo = responseJSON.results;
         for (let i = 0; i < responseJSON.length; i++) {
             console.log(responseJSON[i])
-            if (i === 12) {
+            if (i === 50) {
                 break
             }
             blogPost.innerHTML += `<div class="postcontainer"><a href="detail.html?id=${responseJSON[i].id}">
             ${responseJSON[i].slug}
             </div>
             <h3> ${responseJSON[i].slug}</h3>
-            <img src="${wholeResponse[i].content.rendered}
+            <img src="${wholeResponse[i].content.rendered}">
             `
+            ////caruselPost.innerHTML += `<img src="${responseJSON[i].content.rendered}">`
         }
 
     }
