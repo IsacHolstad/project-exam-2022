@@ -26,7 +26,7 @@ async function blogResults() {
         const blogInfo = responseJSON.results;
         for (let i = 0; i < responseJSON.length; i++) {
             console.log(responseJSON[i])
-            if (i === 50) {
+            if (i === 10) {
                 break
             }
             blogPost.innerHTML += `<div class="postcontainer"><a href="detail.html?id=${responseJSON[i].id}">
