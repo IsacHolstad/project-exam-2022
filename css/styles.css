@@ -131,13 +131,9 @@ p{
   }
   
   @media screen and (min-width: 700px) and (max-width:1400px) {
-    img.logo{
-      display: block;
-      position: absolute;
-      top: 50px;
-      left: 5px;
-    }
-    .header li {
+
+   
+      .header li {
         float: right;
       }
       .header li a {
@@ -149,7 +145,7 @@ p{
         max-height: none;
         background-color: #1fab89;
         width: 100%;
-       position: absolute;
+       position: relative;
        top: 0%;
       }
       .menu-icon {
@@ -158,6 +154,10 @@ p{
       .header {
         background-color: #1fab89;
 
+      }
+      .logo{
+        margin-top: 30px;
+        position: absolute;
       }
 
    
