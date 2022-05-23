@@ -10,6 +10,11 @@ TEMPERARY NON SIDPLAY STUFF
 p{
   display: none;
 }
+h4{
+  color: white;
+  text-align: center;
+  padding-top: 15px;
+}
 .img{
   height: 201px;
   width: 264px;
