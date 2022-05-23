@@ -33,7 +33,7 @@ async function blogResults() {
             ${responseJSON[i].slug}
             </div>
             <h3> ${responseJSON[i].slug}</h3>
-            <img src="${wholeResponse[i].content.rendered}">
+            <img src="${wholeResponse[i].content.rendered}
             `
             ////caruselPost.innerHTML += `<img src="${responseJSON[i].content.rendered}">`
         }
