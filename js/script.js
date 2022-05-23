@@ -33,7 +33,7 @@ async function blogResults() {
             ${responseJSON[i].slug}
             </div>
             <h3> ${responseJSON[i].slug}</h3>
-            <img class="img-blogs" src="${wholeResponse[i].content.rendered}
+            <img src="${wholeResponse[i].content.rendered}
             `
         }
 
