@@ -4,20 +4,6 @@
     font-family: 'Rubik', sans-serif;
 }
 
-a{
-  color: white;
-}
-.contact{
-    text-decoration: underline;
-}
-
-.logo{
-  width: 40px;
-}
-
-a:hover{
-  text-decoration: underline;
-}
 .header {
   background-color: #1fab89;
     position: absolute;
@@ -102,6 +88,50 @@ a:hover{
   .header .menu-btn:checked ~ .menu-icon .nav-icon:after {
     transform: rotate(45deg);
     top: 0;
+  }
+  /*
+  this
+  is 
+  just
+   for
+   temporary
+   spacing
+   */
+   a{
+    color: white;
+  }
+  .contact{
+      text-decoration: underline;
+  }
+  
+  .logo{
+    width: 40px;
+  }
+  
+  a:hover{
+    text-decoration: underline;
+  }
+  .contact-background{
+    width: 100%;
+    height: 1900px;
+    background-color: #D7FBEB;
+  }
+  .contact-box{
+    width: 70%;
+    position: relative;
+    top: 150px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    border-radius: 10px;
+    height: 500px;
+    background-color: #9DF3C4;
+  }
+  .footer{
+    width: 100%;
+    height: 150px;
+    color: white;
+    background-color: black;
+    text-align: center;
+    padding-top: 15px;
   }
   @media screen and (min-width: 700px) and (max-width:1400px) {
     .header li {
