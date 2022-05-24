@@ -12,6 +12,13 @@ TEMPERARY NON SIDPLAY STUFF
   justify-content: center;
   
   
+}
+figure img{
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  
 
 }
 p{
@@ -77,6 +84,7 @@ p{
 .read-more-btn{
   height: 35px;
   width: 100px;
+  margin-top: 15px;
   background-color: #1FAB89  ;
   border-radius: 15px;
   border: 0.5px;
@@ -90,6 +98,7 @@ h4{
   color: white;
   text-align: center;
   padding-top: 15px;
+  margin-bottom: 15px;
 }
 
 
@@ -279,7 +288,8 @@ li{
 }
 input{
     margin-top: 12px;
-    width: 350px;
+    width: 450px;
+    margin-bottom: 12px;
     height: 25px;
     border-radius: 20px;
     border: 1px solid black;

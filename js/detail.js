@@ -16,9 +16,23 @@ const proxy = "https://noroffcors.herokuapp.com/";
 const corsFixUrl = proxy + ApiUrl;
 console.log(corsFixUrl);
 
-///
-///
-///
-///
-///
+const blogDetailPost = document.querySelector(".blog-post")
 
+///
+///
+///
+///
+///
+async function getData() {
+    try{
+        const response = await fetch(corsFixUrl);
+        console.log(response);
+        const blogData = await response.json()
+        console.log(blogData)
+        blogDetailPost.innerHTML += `<h1>${blogData.id}</h1>`
+    }
+    catch(e) {
+        console.log("error")
+    }
+}
+getData()
