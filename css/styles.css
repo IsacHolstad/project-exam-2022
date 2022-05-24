@@ -3,19 +3,20 @@
     padding: 0 auto;
     font-family: 'Rubik', sans-serif;
 }
-/*
-TEMPERARY NON SIDPLAY STUFF
 
-*/
 .recent-top-posts{
   align-items: center;
-  justify-content: center;
-  
-  
+  justify-content: center; 
 }
 figure img{
   display: flex;
   flex-direction: column;
+  position: relative;
+  
+}
+.img-blog-posts{
+  position: relative;
+  padding-left: 5px;
 }
 p{
   display: none;
@@ -93,9 +94,10 @@ p{
 h3{
   text-decoration: none;
   padding-bottom: 15px;
-  text-align: right;
+  text-align: center;
   padding-right: 15px;
-  font-weight: 500;
+  font-weight: 600;
+  color: black;
 }
 h4{
   color: white;
@@ -205,9 +207,7 @@ h4{
     position: absolute;
     left: 5px;
   }
-  h3{
-    color: black;
-  }
+ 
   
   a:hover{
     text-decoration: underline;
@@ -332,6 +332,37 @@ a{
   @media screen and (min-width: 320px) and (max-width: 480px) {
     input{
       width: 280px;
+    }
+    figure img{
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      width: 60%;
+      height: 40%;
+      
+    }
+    h3{
+      text-decoration: none;
+      padding-bottom: 15px;
+      text-align: center;
+      padding-right: 15px;
+      font-size: 14px;
+      font-weight: 600;
+      color: black;
+    }
+    .read-more-btn{
+      height: 20px;
+      width: 80px;
+      margin-top: 15px;
+      background-color: #1FAB89  ;
+      border-radius: 10px;
+      border: 0.5px;
+      color: white;
+      font-weight: 400;
+      font-size: 10px;
+      box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+      cursor: pointer;
+    
     }
     
   }
