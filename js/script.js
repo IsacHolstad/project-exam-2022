@@ -36,8 +36,8 @@ async function blogResults() {
             <div class="img-blog-posts"> ${wholeResponse[i].content.rendered}</div>
             <button class="read-more-btn">Read More</button>
             `
-            ////caruselPost.innerHTML += `<img src="${responseJSON[i].content.rendered}">`
-            caruselPost.innerHTML = `<center><div class="recent-top-posts"><img src="${responseJSON[i].content.rendered}</div></center>`
+            
+            caruselPost.innerHTML = `<center><div class="recent-top-posts"><a href="detail.html?id=${responseJSON[i].content.rendered}"><img src="${responseJSON[i].content.rendered}</div></center>`
         }
 
     }
