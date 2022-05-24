@@ -30,7 +30,7 @@ async function blogResults() {
                 break
             }
             blogPost.innerHTML += `<div class="postcontainer"><a href="detail.html?id=${responseJSON[i].id}">
-            ${responseJSON[i].slug}
+           
             </div>
             <h3> ${responseJSON[i].slug}</h3>
             <div class="img-blog-posts"> ${wholeResponse[i].content.rendered}</div>
