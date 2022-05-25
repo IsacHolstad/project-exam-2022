@@ -125,8 +125,42 @@
     height: 500px;
     background-color: #9DF3C4;
   }
-  .contact-logo{
-    width: 40px;
+  .contact-box-logo{
+    width: 48px;
+    padding-top: 15px;
+  }
+  .name-input{
+    width: 22%;
+    border-radius: 10px;
+    border: 1px solid black;
+    margin-bottom: 5px;
+  }
+  .email-input{
+    width: 22%;
+    border-radius: 10px;
+    border: 1px solid black;
+    margin-bottom: 5px;
+  }
+  .message-input{
+    width: 22%;
+    border-radius: 10px;
+    border: 1px solid black;
+    margin-bottom: 5px;
+    height: 150px;
+  }
+  .send-input{
+    width: 7%;
+    border-radius: 10px;
+    border: 1px solid black;
+    margin-bottom: 5px;
+  }
+  .contact-inputs {
+    padding: 5px;
+    position: relative;
+    justify-content: space-between;
+    display: flex;
+    flex-direction:column;
+    
   }
   .footer{
     width: 100%;
