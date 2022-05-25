@@ -113,7 +113,7 @@
   }
   .contact-background{
     width: 100%;
-    height: 1900px;
+    height: 20000px;
     background-color: #D7FBEB;
   }
   .contact-box{
@@ -129,45 +129,65 @@
     width: 48px;
     padding-top: 15px;
   }
-  .name-input{
-    width: 22%;
+  /*
+
+
+
+  */
+  form{
+    padding: 40px;
+
+  }
+  .form-group label{
+    font-size: 20px;
+    display: block;
+    margin-bottom: 10px;
+  }
+  .form-group input{
+    border: 1px solid black;
+    width: 24%;
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 4px;
+  }
+  input.invalid{
+    border: 1px solid red;
+    color: red;
+  }
+  .error-hint{
+    color: red;
+    padding-bottom: 5px;
+  }
+  hr{
+    background-color: #333;
+    border: 0;
+    height: 1px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  button{
+    margin-top: 5px;
+    transition: all 0.5s;
     border-radius: 10px;
     border: 1px solid black;
-    margin-bottom: 5px;
   }
-  .email-input{
-    width: 22%;
-    border-radius: 10px;
+  button:hover{
+    background-color: green;
+    color: white;
     border: 1px solid black;
-    margin-bottom: 5px;
   }
-  .message-input{
-    width: 22%;
-    border-radius: 10px;
-    border: 1px solid black;
-    margin-bottom: 5px;
-    height: 150px;
+  .hidden{
+    display: none;
   }
-  .send-input{
-    width: 7%;
-    border-radius: 10px;
-    border: 1px solid black;
-    margin-bottom: 5px;
-  }
-  .contact-inputs {
-    padding: 5px;
-    position: relative;
-    justify-content: space-between;
-    display: flex;
-    flex-direction:column;
-    
-  }
+ 
   .footer{
     width: 100%;
-    height: 150px;
+    height: 100px;
     color: white;
     background-color: black;
     text-align: center;
+    position: absolute;
+    bottom: 0px;
     padding-top: 15px;
   }
   @media screen and (min-width: 700px) and (max-width:1400px) {

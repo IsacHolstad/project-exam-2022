@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact</title>
-    <script src="./js/script.js" defer></script>
+    <script src="./js/contact.js" defer></script>
     <link rel="stylesheet" href="./css/contact.css">
 </head>
 <body>
@@ -22,18 +22,17 @@
     <div class="contact-background">
       <div class="contact-box">
         <center><img class="contact-box-logo" src="./logo/logo.png" alt="blog logo"></center>
-        <div class="contact-inputs">
-          <br>
-          <h5>We would love to hear from you!</h5>
-          <br>
-          <input class="name-input" type="name" placeholder="Full Name"/>
-            <input class="email-input" type="email" placeholder="Gmail"/>
-            <input class="message-input" type="text" placeholder="Your message"/>
-          <input class="send-input" type="submit" placeholder="send">
-        </div>
-
-
-      </div>
+        <form>
+          <div class="form-group">
+            <label>Full name</label>
+            <input class="" placeholder="full name"/>
+            <div class="error-hint hidden">your name is requierd</div>
+          </div>
+          <hr/>
+          <button>Send</button>
+        </form>
+      
+    
       
 
     </div>
