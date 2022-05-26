@@ -9,20 +9,39 @@ const isValidEmail = (email) => {
   const thankYou = document.querySelector('.thankyou')
 
   const nameInput = document.querySelector('input[name="name"]');
+
+  const emailInput = document.querySelector('input[name="email"]');
   
   let isFormValid = false;
 
-  const validateInputs = () => {
-    nameInput.classList.remove("invalid");
-    nameInput.nextElementSibling.classList.add("hidden")
-    isFormValid = true
-    if (!nameInput.value) {
-        nameInput.classList.add("invalid")
-        nameInput.nextElementSibling.classList.remove("hidden")
-        isFormValid = false;
+  const resetElm = (elm) => {
+    elm.classList.remove("invalid");
+    elm.nextElementSibling.classList.add("hidden")
+  }
+const inputs = [
+    nameInput,
+    emailInput,
+]
 
+  const invaliDateElm = (elm) => {
+    elm.classList.add("invalid")
+    elm.nextElementSibling.classList.remove("hidden")
+  }
+
+  const validateInputs = () => {
+    isFormValid = true;
+    resetElm(nameInput);
+    resetElm(emailInput)
+    if (!nameInput.value) {
+        isFormValid = false;
+        invaliDateElm(nameInput);
     }
-}
+    if (!isValidEmail(emailInput.value)) {
+        isFormValid = false;
+        invaliDateElm(emailInput);
+    }
+};
+
 
   form.addEventListener('submit', (e) => {
       e.preventDefault();
@@ -34,7 +53,11 @@ const isValidEmail = (email) => {
       
 
   });
-  nameInput.addEventListener('input', () =>{
-      validateInputs();
+  inputs.forEach((input) => {
+    input.addEventListener("input", () =>{
+        validateInputs();
+  
+    });
 
   })
+ 

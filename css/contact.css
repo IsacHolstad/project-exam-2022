@@ -138,6 +138,9 @@
     padding: 40px;
 
   }
+  .form-group{
+    margin-bottom: 20px;
+  }
   .form-group label{
     font-size: 20px;
     display: block;
