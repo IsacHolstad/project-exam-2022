@@ -3,13 +3,13 @@ const params = new URLSearchParams(queryString);
 const id = params.get('id');
 
 
-const ApiUrl = `https://isacblog.flywheelsites.com/wp-json/wp/v2/posts${'id'}`;
-console.log(ApiUrl)
+const ApiUrl = `https://isacblog.flywheelsites.com/wp-json/wp/v2/posts/${id}`
+//console.log(ApiUrl)
 const proxy = "https://noroffcors.herokuapp.com/";
 const corsFixUrl = proxy + ApiUrl;
-console.log(corsFixUrl);
+//console.log(corsFixUrl);
 
-const blogDetailPost = document.querySelector(".blog-post")
+const detailPost = document.querySelector(".blog-post")
 
 ///
 ///
@@ -19,14 +19,15 @@ const blogDetailPost = document.querySelector(".blog-post")
 async function getData() {
     try{
         const response = await fetch(corsFixUrl);
-        console.log(response);
-        const blogData = await response.json()
-        console.log(blogData)
-        blogDetailPost.innerHTML += `<div class="blog-box">${blogData.slug}, ${wholeResponse.content.rendered}
+        //console.log(response);
+        const blogData = await response.json();
+        //console.log(blogData)
+        detailPost.innerHTML = `<div class="blog-box">${wholeResponse.slug.title}
+        
         </div>
         `
     }
-    catch(e) {
+    catch(error) {
         console.log("error")
     }
 }
