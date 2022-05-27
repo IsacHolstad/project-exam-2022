@@ -10,20 +10,19 @@ const slideShowPost = document.querySelector(".carusel-container")
 
 async function blogResults() {
     try{
-        const response = await fetch(myAPI);
+        const response = await fetch(corsFixUrl);
         ////console.log(response);
         const responseJSON = await response.json();
         ////console.log(responseJSON);
         const blogInfo = responseJSON.results;
         for (let i = 0; i < responseJSON.length; i++) {
-            console.log(responseJSON[i])
-            if (i === 10) {
-                break
-            }
-            blog.innerHTML += `<div><a href="detail.html?id=${responseJSON[i].id}">hello</div>
-            <h3> ${responseJSON[i].slug}</h3>
+            //console.log(responseJSON[i])
+           
+            blog.innerHTML += `<div><a href="detail.html?id=${responseJSON[i].id}"></div>
+            <h3> ${responseJSON[i].title.rendered}</h3>
             <div class="img-blog-posts"> ${wholeResponse[i].content.rendered}</div>
             <center><button class="read-more-btn">Read More</button></center>
+        
             `
             
             //SOME ERROR WITH THIS BELOW
@@ -32,7 +31,7 @@ async function blogResults() {
 
     }
     catch(error) {
-        blogPost.innerHTML += `<center><h2>error</h2></center>`;
+        blog.innerHTML += `<center><h2>error</h2></center>`;
     }
 }
 blogResults()
