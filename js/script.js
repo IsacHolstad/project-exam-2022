@@ -1,8 +1,4 @@
 
-//
-//
-//
-//
 const myAPI = "https://isacblog.flywheelsites.com/wp-json/wp/v2/posts";
 //console.log(myAPI);
 const proxy = "https://noroffcors.herokuapp.com/";
@@ -1144,10 +1140,11 @@ const getImgSrc = (imgStr) => {
 for (let i = 0; i < wholeResponse.length; i++) {
     let myImage = getImgSrc(wholeResponse[i].content.rendered)
     if (myImage) { //check that the images are returning
-        console.log(myImage)
+        ////console.log(myImage)
+       
 
     }
-    console.log(wholeResponse[i].content.rendered)
+    ////console.log(wholeResponse[i].content.rendered)
 }
 
 

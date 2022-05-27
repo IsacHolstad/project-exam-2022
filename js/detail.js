@@ -2,13 +2,6 @@ const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
 const id = params.get('id');
 
-////
-////
-////
-/////
-////
-/////
-////SPACING FOR NOW ONLY
 
 const ApiUrl = `https://isacblog.flywheelsites.com/wp-json/wp/v2/posts${'id'}`;
 console.log(ApiUrl)
@@ -29,7 +22,9 @@ async function getData() {
         console.log(response);
         const blogData = await response.json()
         console.log(blogData)
-        blogDetailPost.innerHTML += `<div>${blogData.slug}</div>`
+        blogDetailPost.innerHTML += `<div class="blog-box">${blogData.slug}, ${wholeResponse.content.rendered}
+        </div>
+        `
     }
     catch(e) {
         console.log("error")
@@ -1136,5 +1131,5 @@ if (myImage) { //check that the images are returning
     console.log(myImage)
 
 }
-console.log(wholeResponse[i].content.rendered)
+//console.log(wholeResponse[i].content.rendered)
 }
