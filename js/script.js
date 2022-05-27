@@ -17,19 +17,19 @@ async function blogResults() {
         const blogInfo = responseJSON.results;
         for (let i = 0; i < responseJSON.length; i++) {
             //console.log(responseJSON[i])
-            if (i == 12) {
+            if (i == 10) {
                 break
             }
            
             blogIMG.innerHTML += `<div><a href="detail.html?id=${responseJSON[i].id}"></div>
-            <h3> ${responseJSON[i].slug}</h3>
+            <h3> ${responseJSON[i].title.rendered}</h3>
             <div class="img-blog-posts"> ${wholeResponse[i].content.rendered}</div>
             <center><button class="read-more-btn">Read More</button></center>
         
             `
             
             //SOME ERROR WITH THIS BELOW
-            //slideShowPost.innerHTML = `<center><div class="recent-top-posts"><img src="${responseJSON[i].content.rendered}</div></center>`
+            slideShowPost.innerHTML = `<center><div class="recent-top-posts"><img src="${responseJSON[i].content.rendered}</div></center>`
         }
 
     }
