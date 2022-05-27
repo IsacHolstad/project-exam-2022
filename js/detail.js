@@ -18,7 +18,7 @@ async function getData() {
         //console.log(response);
         const blogData = await response.json();
         console.log(blogData);
-        detailPost.innerHTML = `<div class="specific-title" ${blogData.content.rendered}">hello</div>`
+        detailPost.innerHTML = `<div class="specific-title" ${blogData.content.slug} ${blogData.content.rendered}</div>`
     }
     catch(error) {
         detailPost.innerHTML = `<h1>404</h1>`

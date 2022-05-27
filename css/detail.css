@@ -105,9 +105,14 @@ a:hover{
   }
   
   .blog-post{
-   
-    width: 30%;
+    position: relative;
+    top: 155px;
+    width: 40%;
     height: 40%;
+  }
+  .img{
+    position: relative;
+    padding-top: 15px;
   }
   .footer{
     width: 100%;
