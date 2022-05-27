@@ -1,21 +1,16 @@
-
-const myAPI = "https://isacblog.flywheelsites.com/wp-json/wp/v2/posts";
+const myAPI = "https://isacblog.flywheelsites.com/wp-json/wp/v2/posts"
 //console.log(myAPI);
 const proxy = "https://noroffcors.herokuapp.com/";
 const corsFixUrl = proxy + myAPI; 
 
 
-const blogPost = document.querySelector(".blog-posts");
-const caruselPost = document.querySelector(".carusel-container")
+const blog = document.querySelector(".blog-posts");
+const slideShowPost = document.querySelector(".carusel-container")
 ////
-////
-////
-////
-////
-////
+
 async function blogResults() {
     try{
-        const response = await fetch(corsFixUrl);
+        const response = await fetch(myAPI);
         ////console.log(response);
         const responseJSON = await response.json();
         ////console.log(responseJSON);
@@ -25,15 +20,14 @@ async function blogResults() {
             if (i === 12) {
                 break
             }
-            blogPost.innerHTML += `<div class="postcontainer"><a href="detail.html?id=${responseJSON[i].id}">
-           
-            </div>
+            blog.innerHTML += `<div><a href="detail.html?id=${responseJSON[i].id}">hello</div>
             <h3> ${responseJSON[i].slug}</h3>
             <div class="img-blog-posts"> ${wholeResponse[i].content.rendered}</div>
             <center><button class="read-more-btn">Read More</button></center>
             `
             
-            caruselPost.innerHTML = `<center><div class="recent-top-posts"><img src="${responseJSON[i].content.rendered}</div></center>`
+            //SOME ERROR WITH THIS BELOW
+            ////slideShowPost.innerHTML = `<center><div class="recent-top-posts"><img src="${responseJSON[i].content.rendered}</div></center>`
         }
 
     }
@@ -45,222 +39,6 @@ blogResults()
 
 
 let wholeResponse = [
-    {
-        "id": 155,
-        "date": "2022-05-27T13:01:36",
-        "date_gmt": "2022-05-27T13:01:36",
-        "guid": {
-            "rendered": "http://isacblog.local/?p=155"
-        },
-        "modified": "2022-05-27T13:02:08",
-        "modified_gmt": "2022-05-27T13:02:08",
-        "slug": "fpv-drones-recal",
-        "status": "publish",
-        "type": "post",
-        "link": "https://isacblog.flywheelsites.com/fpv-drones-recal/",
-        "title": {
-            "rendered": "FPV drones recal"
-        },
-        "content": {
-            "rendered": "<div class=\"wp-block-image\">\n<figure class=\"alignleft size-large is-resized\"><img loading=\"lazy\" src=\"http://isacblog.flywheelsites.com/wp-content/uploads/2022/05/maxresdefault-1024x576.jpg\" alt=\"\" class=\"wp-image-156\" width=\"600\" height=\"360\"/></figure></div>\n\n\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi magna ipsum, lacinia ut congue at, interdum ut lectus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean ultricies turpis quis erat commodo, at egestas ex condimentum. Mauris euismod vel ex vitae efficitur. Praesent facilisis dictum diam, ut vestibulum nunc lacinia vitae. Praesent pulvinar euismod est, id vulputate eros congue eget. In sit amet urna tincidunt, fermentum magna vitae, commodo justo. Vestibulum odio tortor, semper in diam tempus, iaculis dignissim nunc.</p>\n\n\n\n<p>Integer et velit id nisi imperdiet accumsan eget quis enim. Curabitur lacinia arcu id mauris consectetur, quis feugiat dolor aliquam. Morbi porttitor diam id purus tincidunt, a posuere justo lobortis. Quisque pulvinar sem id luctus congue. Phasellus sit amet mi eleifend diam viverra hendrerit sit amet non libero. Sed consequat sapien in dolor rhoncus pharetra. Suspendisse potenti. Sed feugiat nulla vel iaculis bibendum. Nullam tempus nibh vitae lobortis suscipit.</p>\n\n\n\n<p>In sem ligula, gravida in magna id, consectetur facilisis justo. Nullam velit tortor, mattis at efficitur et, hendrerit quis augue. Mauris vestibulum massa lectus, eu tincidunt enim varius vitae. Proin varius maximus nunc. Nullam ullamcorper scelerisque fermentum. In eu lorem pellentesque, molestie ex at, lacinia mauris. Phasellus interdum, justo ut pellentesque mattis, lorem risus cursus eros, nec egestas leo leo in sapien. Pellentesque mollis et est ut commodo.</p>\n\n\n\n<p>Sed pretium egestas purus, sit amet condimentum ipsum dapibus vitae. Cras venenatis volutpat laoreet. Donec pulvinar quis nisl a auctor. Suspendisse maximus felis erat, id lacinia tortor faucibus suscipit. Aenean quis elit id metus fringilla euismod at ut erat. Cras ut sem elementum, cursus tellus sit amet, pellentesque est. Nam porttitor ultricies neque ut sagittis. Sed dignissim velit id nibh maximus, quis laoreet nisi feugiat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Curabitur sit amet malesuada ex. Phasellus tortor sem, efficitur sit amet semper sed, porttitor non libero. Aliquam libero metus, eleifend nec lobortis sit amet, ornare sed dui. Proin in scelerisque mi, ac iaculis libero.</p>\n\n\n<div class=\"wp-block-image\">\n<figure class=\"alignright size-full is-resized\"><img loading=\"lazy\" src=\"http://isacblog.flywheelsites.com/wp-content/uploads/2022/05/1181425_2.webp\" alt=\"\" class=\"wp-image-157\" width=\"600\" height=\"360\"/></figure></div>\n\n\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi magna ipsum, lacinia ut congue at, interdum ut lectus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean ultricies turpis quis erat commodo, at egestas ex condimentum. Mauris euismod vel ex vitae efficitur. Praesent facilisis dictum diam, ut vestibulum nunc lacinia vitae. Praesent pulvinar euismod est, id vulputate eros congue eget. In sit amet urna tincidunt, fermentum magna vitae, commodo justo. Vestibulum odio tortor, semper in diam tempus, iaculis dignissim nunc.</p>\n\n\n\n<p>Integer et velit id nisi imperdiet accumsan eget quis enim. Curabitur lacinia arcu id mauris consectetur, quis feugiat dolor aliquam. Morbi porttitor diam id purus tincidunt, a posuere justo lobortis. Quisque pulvinar sem id luctus congue. Phasellus sit amet mi eleifend diam viverra hendrerit sit amet non libero. Sed consequat sapien in dolor rhoncus pharetra. Suspendisse potenti. Sed feugiat nulla vel iaculis bibendum. Nullam tempus nibh vitae lobortis suscipit.</p>\n\n\n\n<p>In sem ligula, gravida in magna id, consectetur facilisis justo. Nullam velit tortor, mattis at efficitur et, hendrerit quis augue. Mauris vestibulum massa lectus, eu tincidunt enim varius vitae. Proin varius maximus nunc. Nullam ullamcorper scelerisque fermentum. In eu lorem pellentesque, molestie ex at, lacinia mauris. Phasellus interdum, justo ut pellentesque mattis, lorem risus cursus eros, nec egestas leo leo in sapien. Pellentesque mollis et est ut commodo.</p>\n\n\n\n<p>Sed pretium egestas purus, sit amet condimentum ipsum dapibus vitae. Cras venenatis volutpat laoreet. Donec pulvinar quis nisl a auctor. Suspendisse maximus felis erat, id lacinia tortor faucibus suscipit. Aenean quis elit id metus fringilla euismod at ut erat. Cras ut sem elementum, cursus tellus sit amet, pellentesque est. Nam porttitor ultricies neque ut sagittis. Sed dignissim velit id nibh maximus, quis laoreet nisi feugiat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Curabitur sit amet malesuada ex. Phasellus tortor sem, efficitur sit amet semper sed, porttitor non libero. Aliquam libero metus, eleifend nec lobortis sit amet, ornare sed dui. Proin in scelerisque mi, ac iaculis libero.</p>\n",
-            "protected": false
-        },
-        "excerpt": {
-            "rendered": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi magna ipsum, lacinia ut congue at, interdum ut lectus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean ultricies turpis quis erat commodo, at egestas ex condimentum. Mauris euismod vel ex vitae efficitur. Praesent facilisis dictum diam, ut vestibulum nunc lacinia vitae.</p>\n<p class=\"more-link\"><a href=\"https://isacblog.flywheelsites.com/fpv-drones-recal/\" class=\"themebutton\">Read More</a></p>\n",
-            "protected": false
-        },
-        "author": 1,
-        "featured_media": 156,
-        "comment_status": "open",
-        "ping_status": "open",
-        "sticky": false,
-        "template": "",
-        "format": "standard",
-        "meta": [],
-        "categories": [
-            1
-        ],
-        "tags": [],
-        "_links": {
-            "self": [
-                {
-                    "href": "https://isacblog.flywheelsites.com/wp-json/wp/v2/posts/155"
-                }
-            ],
-            "collection": [
-                {
-                    "href": "https://isacblog.flywheelsites.com/wp-json/wp/v2/posts"
-                }
-            ],
-            "about": [
-                {
-                    "href": "https://isacblog.flywheelsites.com/wp-json/wp/v2/types/post"
-                }
-            ],
-            "author": [
-                {
-                    "embeddable": true,
-                    "href": "https://isacblog.flywheelsites.com/wp-json/wp/v2/users/1"
-                }
-            ],
-            "replies": [
-                {
-                    "embeddable": true,
-                    "href": "https://isacblog.flywheelsites.com/wp-json/wp/v2/comments?post=155"
-                }
-            ],
-            "version-history": [
-                {
-                    "count": 1,
-                    "href": "https://isacblog.flywheelsites.com/wp-json/wp/v2/posts/155/revisions"
-                }
-            ],
-            "predecessor-version": [
-                {
-                    "id": 158,
-                    "href": "https://isacblog.flywheelsites.com/wp-json/wp/v2/posts/155/revisions/158"
-                }
-            ],
-            "wp:featuredmedia": [
-                {
-                    "embeddable": true,
-                    "href": "https://isacblog.flywheelsites.com/wp-json/wp/v2/media/156"
-                }
-            ],
-            "wp:attachment": [
-                {
-                    "href": "https://isacblog.flywheelsites.com/wp-json/wp/v2/media?parent=155"
-                }
-            ],
-            "wp:term": [
-                {
-                    "taxonomy": "category",
-                    "embeddable": true,
-                    "href": "https://isacblog.flywheelsites.com/wp-json/wp/v2/categories?post=155"
-                },
-                {
-                    "taxonomy": "post_tag",
-                    "embeddable": true,
-                    "href": "https://isacblog.flywheelsites.com/wp-json/wp/v2/tags?post=155"
-                }
-            ],
-            "curies": [
-                {
-                    "name": "wp",
-                    "href": "https://api.w.org/{rel}",
-                    "templated": true
-                }
-            ]
-        }
-    },
-    {
-        "id": 151,
-        "date": "2022-05-27T12:48:04",
-        "date_gmt": "2022-05-27T12:48:04",
-        "guid": {
-            "rendered": "http://isacblog.local/?p=151"
-        },
-        "modified": "2022-05-27T12:51:09",
-        "modified_gmt": "2022-05-27T12:51:09",
-        "slug": "new-mini-drones",
-        "status": "publish",
-        "type": "post",
-        "link": "https://isacblog.flywheelsites.com/new-mini-drones/",
-        "title": {
-            "rendered": "New mini drones"
-        },
-        "content": {
-            "rendered": "<div class=\"wp-block-image\">\n<figure class=\"alignleft size-full is-resized\"><img loading=\"lazy\" src=\"http://isacblog.flywheelsites.com/wp-content/uploads/2022/05/d98cb7cb27781313304519dd780c1058.webp\" alt=\"mini drone set\" class=\"wp-image-152\" width=\"600\" height=\"360\"/></figure></div>\n\n\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi magna ipsum, lacinia ut congue at, interdum ut lectus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean ultricies turpis quis erat commodo, at egestas ex condimentum. Mauris euismod vel ex vitae efficitur. Praesent facilisis dictum diam, ut vestibulum nunc lacinia vitae. Praesent pulvinar euismod est, id vulputate eros congue eget. In sit amet urna tincidunt, fermentum magna vitae, commodo justo. Vestibulum odio tortor, semper in diam tempus, iaculis dignissim nunc.</p>\n\n\n\n<p>Integer et velit id nisi imperdiet accumsan eget quis enim. Curabitur lacinia arcu id mauris consectetur, quis feugiat dolor aliquam. Morbi porttitor diam id purus tincidunt, a posuere justo lobortis. Quisque pulvinar sem id luctus congue. Phasellus sit amet mi eleifend diam viverra hendrerit sit amet non libero. Sed consequat sapien in dolor rhoncus pharetra. Suspendisse potenti. Sed feugiat nulla vel iaculis bibendum. Nullam tempus nibh vitae lobortis suscipit.</p>\n\n\n\n<p>In sem ligula, gravida in magna id, consectetur facilisis justo. Nullam velit tortor, mattis at efficitur et, hendrerit quis augue. Mauris vestibulum massa lectus, eu tincidunt enim varius vitae. Proin varius maximus nunc. Nullam ullamcorper scelerisque fermentum. In eu lorem pellentesque, molestie ex at, lacinia mauris. Phasellus interdum, justo ut pellentesque mattis, lorem risus cursus eros, nec egestas leo leo in sapien. Pellentesque mollis et est ut commodo.</p>\n\n\n\n<p>Sed pretium egestas purus, sit amet condimentum ipsum dapibus vitae. Cras venenatis volutpat laoreet. Donec pulvinar quis nisl a auctor. Suspendisse maximus felis erat, id lacinia tortor faucibus suscipit. Aenean quis elit id metus fringilla euismod at ut erat. Cras ut sem elementum, cursus tellus sit amet, pellentesque est. Nam porttitor ultricies neque ut sagittis. Sed dignissim velit id nibh maximus, quis laoreet nisi feugiat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Curabitur sit amet malesuada ex. Phasellus tortor sem, efficitur sit amet semper sed, porttitor non libero. Aliquam libero metus, eleifend nec lobortis sit amet, ornare sed dui. Proin in scelerisque mi, ac iaculis libero.</p>\n\n\n<div class=\"wp-block-image\">\n<figure class=\"alignright size-full is-resized\"><img loading=\"lazy\" src=\"http://isacblog.flywheelsites.com/wp-content/uploads/2022/05/minidrone.jpg\" alt=\"mini drone with phone\" class=\"wp-image-153\" width=\"600\" height=\"360\"/></figure></div>\n\n\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi magna ipsum, lacinia ut congue at, interdum ut lectus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean ultricies turpis quis erat commodo, at egestas ex condimentum. Mauris euismod vel ex vitae efficitur. Praesent facilisis dictum diam, ut vestibulum nunc lacinia vitae. Praesent pulvinar euismod est, id vulputate eros congue eget. In sit amet urna tincidunt, fermentum magna vitae, commodo justo. Vestibulum odio tortor, semper in diam tempus, iaculis dignissim nunc.</p>\n\n\n\n<p>Integer et velit id nisi imperdiet accumsan eget quis enim. Curabitur lacinia arcu id mauris consectetur, quis feugiat dolor aliquam. Morbi porttitor diam id purus tincidunt, a posuere justo lobortis. Quisque pulvinar sem id luctus congue. Phasellus sit amet mi eleifend diam viverra hendrerit sit amet non libero. Sed consequat sapien in dolor rhoncus pharetra. Suspendisse potenti. Sed feugiat nulla vel iaculis bibendum. Nullam tempus nibh vitae lobortis suscipit.</p>\n\n\n\n<p>In sem ligula, gravida in magna id, consectetur facilisis justo. Nullam velit tortor, mattis at efficitur et, hendrerit quis augue. Mauris vestibulum massa lectus, eu tincidunt enim varius vitae. Proin varius maximus nunc. Nullam ullamcorper scelerisque fermentum. In eu lorem pellentesque, molestie ex at, lacinia mauris. Phasellus interdum, justo ut pellentesque mattis, lorem risus cursus eros, nec egestas leo leo in sapien. Pellentesque mollis et est ut commodo.</p>\n\n\n\n<p>Sed pretium egestas purus, sit amet condimentum ipsum dapibus vitae. Cras venenatis volutpat laoreet. Donec pulvinar quis nisl a auctor. Suspendisse maximus felis erat, id lacinia tortor faucibus suscipit. Aenean quis elit id metus fringilla euismod at ut erat. Cras ut sem elementum, cursus tellus sit amet, pellentesque est. Nam porttitor ultricies neque ut sagittis. Sed dignissim velit id nibh maximus, quis laoreet nisi feugiat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Curabitur sit amet malesuada ex. Phasellus tortor sem, efficitur sit amet semper sed, porttitor non libero. Aliquam libero metus, eleifend nec lobortis sit amet, ornare sed dui. Proin in scelerisque mi, ac iaculis libero.</p>\n",
-            "protected": false
-        },
-        "excerpt": {
-            "rendered": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi magna ipsum, lacinia ut congue at, interdum ut lectus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean ultricies turpis quis erat commodo, at egestas ex condimentum. Mauris euismod vel ex vitae efficitur. Praesent facilisis dictum diam, ut vestibulum nunc lacinia vitae.</p>\n<p class=\"more-link\"><a href=\"https://isacblog.flywheelsites.com/new-mini-drones/\" class=\"themebutton\">Read More</a></p>\n",
-            "protected": false
-        },
-        "author": 1,
-        "featured_media": 153,
-        "comment_status": "open",
-        "ping_status": "open",
-        "sticky": false,
-        "template": "",
-        "format": "standard",
-        "meta": [],
-        "categories": [
-            1
-        ],
-        "tags": [],
-        "_links": {
-            "self": [
-                {
-                    "href": "https://isacblog.flywheelsites.com/wp-json/wp/v2/posts/151"
-                }
-            ],
-            "collection": [
-                {
-                    "href": "https://isacblog.flywheelsites.com/wp-json/wp/v2/posts"
-                }
-            ],
-            "about": [
-                {
-                    "href": "https://isacblog.flywheelsites.com/wp-json/wp/v2/types/post"
-                }
-            ],
-            "author": [
-                {
-                    "embeddable": true,
-                    "href": "https://isacblog.flywheelsites.com/wp-json/wp/v2/users/1"
-                }
-            ],
-            "replies": [
-                {
-                    "embeddable": true,
-                    "href": "https://isacblog.flywheelsites.com/wp-json/wp/v2/comments?post=151"
-                }
-            ],
-            "version-history": [
-                {
-                    "count": 1,
-                    "href": "https://isacblog.flywheelsites.com/wp-json/wp/v2/posts/151/revisions"
-                }
-            ],
-            "predecessor-version": [
-                {
-                    "id": 154,
-                    "href": "https://isacblog.flywheelsites.com/wp-json/wp/v2/posts/151/revisions/154"
-                }
-            ],
-            "wp:featuredmedia": [
-                {
-                    "embeddable": true,
-                    "href": "https://isacblog.flywheelsites.com/wp-json/wp/v2/media/153"
-                }
-            ],
-            "wp:attachment": [
-                {
-                    "href": "https://isacblog.flywheelsites.com/wp-json/wp/v2/media?parent=151"
-                }
-            ],
-            "wp:term": [
-                {
-                    "taxonomy": "category",
-                    "embeddable": true,
-                    "href": "https://isacblog.flywheelsites.com/wp-json/wp/v2/categories?post=151"
-                },
-                {
-                    "taxonomy": "post_tag",
-                    "embeddable": true,
-                    "href": "https://isacblog.flywheelsites.com/wp-json/wp/v2/tags?post=151"
-                }
-            ],
-            "curies": [
-                {
-                    "name": "wp",
-                    "href": "https://api.w.org/{rel}",
-                    "templated": true
-                }
-            ]
-        }
-    },
     {
         "id": 146,
         "date": "2022-05-19T11:37:47",
@@ -1124,8 +902,225 @@ let wholeResponse = [
                 }
             ]
         }
+    },
+    {
+        "id": 48,
+        "date": "2022-05-09T11:08:42",
+        "date_gmt": "2022-05-09T11:08:42",
+        "guid": {
+            "rendered": "http://isacblog.local/?p=48"
+        },
+        "modified": "2022-05-12T19:19:39",
+        "modified_gmt": "2022-05-12T19:19:39",
+        "slug": "tesla-planing-to-make-drone",
+        "status": "publish",
+        "type": "post",
+        "link": "https://isacblog.flywheelsites.com/tesla-planing-to-make-drone/",
+        "title": {
+            "rendered": "Tesla planing to make drone"
+        },
+        "content": {
+            "rendered": "\n<div class=\"wp-block-image\"><figure class=\"alignleft size-large is-resized\"><img loading=\"lazy\" src=\"http://isacblog.flywheelsites.com/wp-content/uploads/2022/05/tesladrone-1024x576.jpeg\" alt=\"tesla drone sketchs\" class=\"wp-image-49\" width=\"600\" height=\"357\"/></figure></div>\n\n\n\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus scelerisque laoreet tellus, eget mollis dolor sagittis blandit. Pellentesque est magna, faucibus quis tristique eget, iaculis sit amet erat. Sed feugiat odio odio, ac mollis lacus volutpat varius. Nunc sed suscipit neque. Aenean lacus sapien, pharetra quis risus gravida, dignissim tempor tortor. Donec dictum, neque imperdiet pulvinar laoreet, est ligula semper ipsum, eu sodales est nulla ullamcorper eros. Aliquam ante elit, porttitor ut diam non, pellentesque vehicula tellus. Nunc a lacus a purus luctus commodo ac sit amet sem. Cras congue vestibulum lectus, a ullamcorper ligula blandit non. Nam ultrices eros felis, vel pulvinar turpis volutpat ac. Proin bibendum metus nulla, ut suscipit ipsum ullamcorper ac. Nunc imperdiet nunc non cursus varius. Donec porta consectetur metus, non accumsan tellus pharetra eu. Sed rhoncus elit nec aliquam molestie. Donec quis nulla purus.</p>\n\n\n\n<p></p>\n\n\n\n<p>Nulla id volutpat libero, vitae imperdiet tellus. Ut tristique et justo a tempor. Maecenas ligula augue, sollicitudin ut felis nec, auctor placerat leo. Maecenas porttitor ligula sit amet sem accumsan, sit amet eleifend nisl placerat. Duis vel interdum ligula. Donec molestie ex massa, quis pulvinar tortor tincidunt quis. Nunc iaculis neque a nunc iaculis mattis. Mauris dictum est eget posuere sollicitudin. Nulla facilisi. Maecenas in eros eu sem bibendum semper. Vestibulum venenatis accumsan justo. Phasellus feugiat nisl non odio venenatis pulvinar. Cras ut consectetur libero, in convallis diam. Morbi eleifend placerat vulputate. Nunc pulvinar, ex eget dignissim commodo, odio turpis pretium diam, vitae maximus odio lacus condimentum sapien. Sed molestie eget urna vitae cursus.</p>\n\n\n\n<div class=\"wp-block-image\"><figure class=\"alignright size-full is-resized\"><img loading=\"lazy\" src=\"http://isacblog.flywheelsites.com/wp-content/uploads/2022/05/teslasktech.jpeg\" alt=\"tesla big drone sketch\" class=\"wp-image-50\" width=\"600\" height=\"360\"/></figure></div>\n\n\n\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus scelerisque laoreet tellus, eget mollis dolor sagittis blandit. Pellentesque est magna, faucibus quis tristique eget, iaculis sit amet erat. Sed feugiat odio odio, ac mollis lacus volutpat varius. Nunc sed suscipit neque. Aenean lacus sapien, pharetra quis risus gravida, dignissim tempor tortor. Donec dictum, neque imperdiet pulvinar laoreet, est ligula semper ipsum, eu sodales est nulla ullamcorper eros. Aliquam ante elit, porttitor ut diam non, pellentesque vehicula tellus. Nunc a lacus a purus luctus commodo ac sit amet sem. Cras congue vestibulum lectus, a ullamcorper ligula blandit non. Nam ultrices eros felis, vel pulvinar turpis volutpat ac. Proin bibendum metus nulla, ut suscipit ipsum ullamcorper ac. Nunc imperdiet nunc non cursus varius. Donec porta consectetur metus, non accumsan tellus pharetra eu. Sed rhoncus elit nec aliquam molestie. Donec quis nulla purus.</p>\n\n\n\n<p>Nulla id volutpat libero, vitae imperdiet tellus. Ut tristique et justo a tempor. Maecenas ligula augue, sollicitudin ut felis nec, auctor placerat leo. Maecenas porttitor ligula sit amet sem accumsan, sit amet eleifend nisl placerat. Duis vel interdum ligula. Donec molestie ex massa, quis pulvinar tortor tincidunt quis. Nunc iaculis neque a nunc iaculis mattis. Mauris dictum est eget posuere sollicitudin. Nulla facilisi. Maecenas in eros eu sem bibendum semper. Vestibulum venenatis accumsan justo. Phasellus feugiat nisl non odio venenatis pulvinar. Cras ut consectetur libero, in convallis diam. Morbi eleifend placerat vulputate. Nunc pulvinar, ex eget dignissim commodo, odio turpis pretium diam, vitae maximus odio lacus condimentum sapien. Sed molestie eget urna vitae cursus.</p>\n\n\n\n<p>Vivamus eu ipsum laoreet, egestas risus sit amet, ultricies arcu. Nulla porta lorem eu leo rutrum condimentum. In fermentum tortor id risus finibus, eu faucibus mi mollis. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam mattis semper eros, imperdiet euismod risus consequat sed. Cras porttitor, ligula porttitor laoreet eleifend, augue quam hendrerit lacus, vel dignissim nibh ex sed est. Fusce eu urna faucibus, vehicula tellus ut, mollis elit.</p>\n\n\n\n<div class=\"wp-block-image\"><figure class=\"alignleft size-large is-resized\"><img loading=\"lazy\" src=\"http://isacblog.flywheelsites.com/wp-content/uploads/2022/05/teslafactory-1024x538.jpeg\" alt=\"tesla factory\" class=\"wp-image-51\" width=\"600\" height=\"360\"/></figure></div>\n\n\n\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus scelerisque laoreet tellus, eget mollis dolor sagittis blandit. Pellentesque est magna, faucibus quis tristique eget, iaculis sit amet erat. Sed feugiat odio odio, ac mollis lacus volutpat varius. Nunc sed suscipit neque. Aenean lacus sapien, pharetra quis risus gravida, dignissim tempor tortor. Donec dictum, neque imperdiet pulvinar laoreet, est ligula semper ipsum, eu sodales est nulla ullamcorper eros. Aliquam ante elit, porttitor ut diam non, pellentesque vehicula tellus. Nunc a lacus a purus luctus commodo ac sit amet sem. Cras congue vestibulum lectus, a ullamcorper ligula blandit non. Nam ultrices eros felis, vel pulvinar turpis volutpat ac. Proin bibendum metus nulla, ut suscipit ipsum ullamcorper ac. Nunc imperdiet nunc non cursus varius. Donec porta consectetur metus, non accumsan tellus pharetra eu. Sed rhoncus elit nec aliquam molestie. Donec quis nulla purus.</p>\n\n\n\n<p>Nulla id volutpat libero, vitae imperdiet tellus. Ut tristique et justo a tempor. Maecenas ligula augue, sollicitudin ut felis nec, auctor placerat leo. Maecenas porttitor ligula sit amet sem accumsan, sit amet eleifend nisl placerat. Duis vel interdum ligula. Donec molestie ex massa, quis pulvinar tortor tincidunt quis. Nunc iaculis neque a nunc iaculis mattis. Mauris dictum est eget posuere sollicitudin. Nulla facilisi. Maecenas in eros eu sem bibendum semper. Vestibulum venenatis accumsan justo. Phasellus feugiat nisl non odio venenatis pulvinar. Cras ut consectetur libero, in convallis diam. Morbi eleifend placerat vulputate. Nunc pulvinar, ex eget dignissim commodo, odio turpis pretium diam, vitae maximus odio lacus condimentum sapien. Sed molestie eget urna vitae cursus.</p>\n\n\n\n<p>Vivamus eu ipsum laoreet, egestas risus sit amet, ultricies arcu. Nulla porta lorem eu leo rutrum condimentum. In fermentum tortor id risus finibus, eu faucibus mi mollis. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam mattis semper eros, imperdiet euismod risus consequat sed. Cras porttitor, ligula porttitor laoreet eleifend, augue quam hendrerit lacus, vel dignissim nibh ex sed est. Fusce eu urna faucibus, vehicula tellus ut, mollis elit.</p>\n",
+            "protected": false
+        },
+        "excerpt": {
+            "rendered": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus scelerisque laoreet tellus, eget mollis dolor sagittis blandit. Pellentesque est magna, faucibus quis tristique eget, iaculis sit amet erat. Sed feugiat odio odio, ac mollis lacus volutpat varius. Nunc sed suscipit neque. Aenean lacus sapien, pharetra quis risus gravida, dignissim tempor tortor. Donec dictum, neque imperdiet</p>\n<p class=\"more-link\"><a href=\"https://isacblog.flywheelsites.com/tesla-planing-to-make-drone/\" class=\"themebutton\">Read More</a></p>\n",
+            "protected": false
+        },
+        "author": 1,
+        "featured_media": 49,
+        "comment_status": "open",
+        "ping_status": "open",
+        "sticky": false,
+        "template": "",
+        "format": "standard",
+        "meta": [],
+        "categories": [
+            1
+        ],
+        "tags": [],
+        "_links": {
+            "self": [
+                {
+                    "href": "https://isacblog.flywheelsites.com/wp-json/wp/v2/posts/48"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://isacblog.flywheelsites.com/wp-json/wp/v2/posts"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://isacblog.flywheelsites.com/wp-json/wp/v2/types/post"
+                }
+            ],
+            "author": [
+                {
+                    "embeddable": true,
+                    "href": "https://isacblog.flywheelsites.com/wp-json/wp/v2/users/1"
+                }
+            ],
+            "replies": [
+                {
+                    "embeddable": true,
+                    "href": "https://isacblog.flywheelsites.com/wp-json/wp/v2/comments?post=48"
+                }
+            ],
+            "version-history": [
+                {
+                    "count": 4,
+                    "href": "https://isacblog.flywheelsites.com/wp-json/wp/v2/posts/48/revisions"
+                }
+            ],
+            "predecessor-version": [
+                {
+                    "id": 124,
+                    "href": "https://isacblog.flywheelsites.com/wp-json/wp/v2/posts/48/revisions/124"
+                }
+            ],
+            "wp:featuredmedia": [
+                {
+                    "embeddable": true,
+                    "href": "https://isacblog.flywheelsites.com/wp-json/wp/v2/media/49"
+                }
+            ],
+            "wp:attachment": [
+                {
+                    "href": "https://isacblog.flywheelsites.com/wp-json/wp/v2/media?parent=48"
+                }
+            ],
+            "wp:term": [
+                {
+                    "taxonomy": "category",
+                    "embeddable": true,
+                    "href": "https://isacblog.flywheelsites.com/wp-json/wp/v2/categories?post=48"
+                },
+                {
+                    "taxonomy": "post_tag",
+                    "embeddable": true,
+                    "href": "https://isacblog.flywheelsites.com/wp-json/wp/v2/tags?post=48"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 40,
+        "date": "2022-05-09T10:37:59",
+        "date_gmt": "2022-05-09T10:37:59",
+        "guid": {
+            "rendered": "http://isacblog.local/?p=40"
+        },
+        "modified": "2022-05-12T19:21:02",
+        "modified_gmt": "2022-05-12T19:21:02",
+        "slug": "new-things-about-2022-drone",
+        "status": "publish",
+        "type": "post",
+        "link": "https://isacblog.flywheelsites.com/new-things-about-2022-drone/",
+        "title": {
+            "rendered": "New things about 2022 drone"
+        },
+        "content": {
+            "rendered": "\n<div class=\"wp-block-image\"><figure class=\"alignleft size-full is-resized\"><img loading=\"lazy\" src=\"http://isacblog.flywheelsites.com/wp-content/uploads/2022/05/1173846-1.webp\" alt=\"white drone\" class=\"wp-image-41\" width=\"600\" height=\"360\"/></figure></div>\n\n\n\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus scelerisque laoreet tellus, eget mollis dolor sagittis blandit. Pellentesque est magna, faucibus quis tristique eget, iaculis sit amet erat. Sed feugiat odio odio, ac mollis lacus volutpat varius. Nunc sed suscipit neque. Aenean lacus sapien, pharetra quis risus gravida, dignissim tempor tortor. Donec dictum, neque imperdiet pulvinar laoreet, est ligula semper ipsum, eu sodales est nulla ullamcorper eros. Aliquam ante elit, porttitor ut diam non, pellentesque vehicula tellus. Nunc a lacus a purus luctus commodo ac sit amet sem. Cras congue vestibulum lectus, a ullamcorper ligula blandit non. Nam ultrices eros felis, vel pulvinar turpis volutpat ac. Proin bibendum metus nulla, ut suscipit ipsum ullamcorper ac. Nunc imperdiet nunc non cursus varius. Donec porta consectetur metus, non accumsan tellus pharetra eu. Sed rhoncus elit nec aliquam molestie. Donec quis nulla purus.</p>\n\n\n\n<p>Nulla id volutpat libero, vitae imperdiet tellus. Ut tristique et justo a tempor. Maecenas ligula augue, sollicitudin ut felis nec, auctor placerat leo. Maecenas porttitor ligula sit amet sem accumsan, sit amet eleifend nisl placerat. Duis vel interdum ligula. Donec molestie ex massa, quis pulvinar tortor tincidunt quis. Nunc iaculis neque a nunc iaculis mattis. Mauris dictum est eget posuere sollicitudin. Nulla facilisi. Maecenas in eros eu sem bibendum semper. Vestibulum venenatis accumsan justo. Phasellus feugiat nisl non odio venenatis pulvinar. Cras ut consectetur libero, in convallis diam. Morbi eleifend placerat vulputate. Nunc pulvinar, ex eget dignissim commodo, odio turpis pretium diam, vitae maximus odio lacus condimentum sapien. Sed molestie eget urna vitae cursus.</p>\n\n\n\n<p>Vivamus eu ipsum laoreet, egestas risus sit amet, ultricies arcu. Nulla porta lorem eu leo rutrum condimentum. In fermentum tortor id risus finibus, eu faucibus mi mollis. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam mattis semper eros, imperdiet euismod risus consequat sed. Cras porttitor, ligula porttitor laoreet eleifend, augue quam hendrerit lacus, vel dignissim nibh ex sed est. Fusce eu urna faucibus, vehicula tellus ut, mollis elit.</p>\n\n\n\n<p>Nullam viverra tincidunt viverra. Maecenas accumsan sed magna et maximus. Aliquam feugiat nisi at ligula pretium, ut tempus metus elementum. Praesent fermentum faucibus ornare. Curabitur bibendum euismod egestas. Phasellus justo turpis, imperdiet vitae augue eget, pretium venenatis nunc. Phasellus commodo quam at bibendum tempor. Praesent leo purus, condimentum vitae tellus nec, auctor porttitor libero. Nunc quam nunc, tristique non sapien vel, venenatis pretium ex.</p>\n\n\n\n<p>Sed tempor ex ullamcorper, rhoncus leo ac, imperdiet arcu. Vivamus justo augue, ultrices at efficitur non, aliquam semper nibh. Vestibulum faucibus maximus nulla, vehicula facilisis dolor bibendum sed. Cras molestie viverra sapien quis venenatis. Nullam feugiat semper elit, ut suscipit augue tincidunt in. Duis vitae pulvinar ex, et fringilla risus. Donec ac ullamcorper ligula.</p>\n\n\n\n<div class=\"wp-block-image\"><figure class=\"alignright size-full is-resized\"><img loading=\"lazy\" src=\"http://isacblog.flywheelsites.com/wp-content/uploads/2022/05/screen-shot-2017-10-12-at-9-50-16-am.webp\" alt=\"new 4k drone camera\" class=\"wp-image-44\" width=\"600\" height=\"360\"/></figure></div>\n\n\n\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus scelerisque laoreet tellus, eget mollis dolor sagittis blandit. Pellentesque est magna, faucibus quis tristique eget, iaculis sit amet erat. Sed feugiat odio odio, ac mollis lacus volutpat varius. Nunc sed suscipit neque. Aenean lacus sapien, pharetra quis risus gravida, dignissim tempor tortor. Donec dictum, neque imperdiet pulvinar laoreet, est ligula semper ipsum, eu sodales est nulla ullamcorper eros. Aliquam ante elit, porttitor ut diam non, pellentesque vehicula tellus. Nunc a lacus a purus luctus commodo ac sit amet sem. Cras congue vestibulum lectus, a ullamcorper ligula blandit non. Nam ultrices eros felis, vel pulvinar turpis volutpat ac. Proin bibendum metus nulla, ut suscipit ipsum ullamcorper ac. Nunc imperdiet nunc non cursus varius. Donec porta consectetur metus, non accumsan tellus pharetra eu. Sed rhoncus elit nec aliquam molestie. Donec quis nulla purus.</p>\n\n\n\n<div class=\"wp-block-image\"><figure class=\"alignleft size-full is-resized\"><img loading=\"lazy\" src=\"http://isacblog.flywheelsites.com/wp-content/uploads/2022/05/179022897_max-1.jpg\" alt=\"drone with carbon fiber blades\" class=\"wp-image-46\" width=\"600\" height=\"360\"/></figure></div>\n\n\n\n<p>Vivamus eu ipsum laoreet, egestas risus sit amet, ultricies arcu. Nulla porta lorem eu leo rutrum condimentum. In fermentum tortor id risus finibus, eu faucibus mi mollis. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam mattis semper eros, imperdiet euismod risus consequat sed. Cras porttitor, ligula porttitor laoreet eleifend, augue quam hendrerit lacus, vel dignissim nibh ex sed est. Fusce eu urna faucibus, vehicula tellus ut, mollis elit.</p>\n\n\n\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus scelerisque laoreet tellus, eget mollis dolor sagittisur metus, non accumsan tellus pharetra eu. Sed rhoncus elit nec aliquam molestie. Donec quis nulla purus.</p>\n\n\n\n<p>Nulla id volutpat libero, vitae imperdiet tellus. Ut tristique et justo a tempor. Maecenas ligula augue, sollicitudin ut felis nec, auctor placerat leo. Maecenas porttitor ligula sit amet sem accumsan, sit amet eleifend nisl placerat. Duis vel interdum ligula. Donec molestie ex massa, quis pulvinar tortor tincidunt quis. Nunc iaculis neque a nunc iaculis mattis. Mauris dictum est eget posuere sollicitudin. Nulla facilisi. Maecenas in eros eu sem bibendum semper. Vestibulum venenatis accumsan justo. Phasellus feugiat nisl non odio venenatis pulvinar. Cras ut consectetur libero, in convallis diam. Morbi eleifend placerat vulputate. Nunc pulvinar, ex eget dignissim commodo, odio turpis pretium diam, vitae maximus odio lacus condimentum sapien. Sed molestie eget urna vitae cursus.</p>\n\n\n\n<p>Vivamus eu ipsum laoreet, egestas risus sit amet, ultricies arcu. Nulla porta lorem eu leo rutrum condimentum. In fermentum tortor id risus finibus, eu faucibus mi mollis. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam mattis semper eros, imperdiet euismod risus consequat sed. Cras porttitor, ligula porttitor laoreet eleifend, augue quam hendrerit lacus, vel dignissim nibh ex sed est. Fusce eu urna faucibus, vehicula tellus ut, mollis elit.</p>\n",
+            "protected": false
+        },
+        "excerpt": {
+            "rendered": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus scelerisque laoreet tellus, eget mollis dolor sagittis blandit. Pellentesque est magna, faucibus quis tristique eget, iaculis sit amet erat. Sed feugiat odio odio, ac mollis lacus volutpat varius. Nunc sed suscipit neque. Aenean lacus sapien, pharetra quis risus gravida, dignissim tempor tortor. Donec dictum, neque imperdiet</p>\n<p class=\"more-link\"><a href=\"https://isacblog.flywheelsites.com/new-things-about-2022-drone/\" class=\"themebutton\">Read More</a></p>\n",
+            "protected": false
+        },
+        "author": 1,
+        "featured_media": 41,
+        "comment_status": "open",
+        "ping_status": "open",
+        "sticky": false,
+        "template": "",
+        "format": "standard",
+        "meta": [],
+        "categories": [
+            1
+        ],
+        "tags": [],
+        "_links": {
+            "self": [
+                {
+                    "href": "https://isacblog.flywheelsites.com/wp-json/wp/v2/posts/40"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://isacblog.flywheelsites.com/wp-json/wp/v2/posts"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://isacblog.flywheelsites.com/wp-json/wp/v2/types/post"
+                }
+            ],
+            "author": [
+                {
+                    "embeddable": true,
+                    "href": "https://isacblog.flywheelsites.com/wp-json/wp/v2/users/1"
+                }
+            ],
+            "replies": [
+                {
+                    "embeddable": true,
+                    "href": "https://isacblog.flywheelsites.com/wp-json/wp/v2/comments?post=40"
+                }
+            ],
+            "version-history": [
+                {
+                    "count": 6,
+                    "href": "https://isacblog.flywheelsites.com/wp-json/wp/v2/posts/40/revisions"
+                }
+            ],
+            "predecessor-version": [
+                {
+                    "id": 128,
+                    "href": "https://isacblog.flywheelsites.com/wp-json/wp/v2/posts/40/revisions/128"
+                }
+            ],
+            "wp:featuredmedia": [
+                {
+                    "embeddable": true,
+                    "href": "https://isacblog.flywheelsites.com/wp-json/wp/v2/media/41"
+                }
+            ],
+            "wp:attachment": [
+                {
+                    "href": "https://isacblog.flywheelsites.com/wp-json/wp/v2/media?parent=40"
+                }
+            ],
+            "wp:term": [
+                {
+                    "taxonomy": "category",
+                    "embeddable": true,
+                    "href": "https://isacblog.flywheelsites.com/wp-json/wp/v2/categories?post=40"
+                },
+                {
+                    "taxonomy": "post_tag",
+                    "embeddable": true,
+                    "href": "https://isacblog.flywheelsites.com/wp-json/wp/v2/tags?post=40"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
     }
 ]
+
 
 
 console.log(wholeResponse)

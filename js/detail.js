@@ -12,20 +12,13 @@ const corsFixUrl = proxy + ApiUrl;
 const detailPost = document.querySelector(".blog-post")
 
 ///
-///
-///
-///
-///
 async function getData() {
     try{
         const response = await fetch(corsFixUrl);
-        //console.log(response);
+        console.log(response);
         const blogData = await response.json();
-        //console.log(blogData)
-        detailPost.innerHTML = `<div class="blog-box">${wholeResponse.slug.title}
-        
-        </div>
-        `
+        console.log(blogData)
+        detailPost.innerHTML = `<h1>${blogData.slug}</h1>`
     }
     catch(error) {
         console.log("error")
@@ -1114,7 +1107,7 @@ let wholeResponse = [
             ]
         }
     }
-];
+]
 
 
 console.log(wholeResponse)
