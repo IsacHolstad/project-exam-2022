@@ -1,10 +1,10 @@
-const myAPI = "https://isacblog.flywheelsites.com/wp-json/wp/v2/posts"
+const myAPI = 'https://isacblog.flywheelsites.com/wp-json/wp/v2/posts';
 //console.log(myAPI);
 const proxy = "https://noroffcors.herokuapp.com/";
 const corsFixUrl = proxy + myAPI; 
 
 
-const blog = document.querySelector(".blog-posts");
+const blogIMG = document.querySelector(".blog-posts");
 const slideShowPost = document.querySelector(".carusel-container")
 ////
 
@@ -17,21 +17,24 @@ async function blogResults() {
         const blogInfo = responseJSON.results;
         for (let i = 0; i < responseJSON.length; i++) {
             //console.log(responseJSON[i])
+            if (i == 12) {
+                break
+            }
            
-            blog.innerHTML += `<div><a href="detail.html?id=${responseJSON[i].id}"></div>
-            <h3> ${responseJSON[i].title.rendered}</h3>
+            blogIMG.innerHTML += `<div><a href="detail.html?id=${responseJSON[i].id}"></div>
+            <h3> ${responseJSON[i].slug}</h3>
             <div class="img-blog-posts"> ${wholeResponse[i].content.rendered}</div>
             <center><button class="read-more-btn">Read More</button></center>
         
             `
             
             //SOME ERROR WITH THIS BELOW
-            ////slideShowPost.innerHTML = `<center><div class="recent-top-posts"><img src="${responseJSON[i].content.rendered}</div></center>`
+            //slideShowPost.innerHTML = `<center><div class="recent-top-posts"><img src="${responseJSON[i].content.rendered}</div></center>`
         }
 
     }
     catch(error) {
-        blog.innerHTML += `<center><h2>error</h2></center>`;
+        blog.innerHTML = `<center><h2>error</h2></center>`;
     }
 }
 blogResults()

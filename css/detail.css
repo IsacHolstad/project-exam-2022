@@ -113,6 +113,8 @@ a:hover{
   .img{
     position: relative;
     padding-top: 15px;
+    width: 70%;
+    height: 50%;
   }
   .footer{
     width: 100%;
