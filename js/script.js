@@ -22,7 +22,8 @@ async function blogResults() {
             blogIMG.innerHTML += `<div><a href="detail.html?id=${responseJSON[i].id}"></div>
             <h3> ${responseJSON[i].title.rendered}</h3>
             <div class="img-blog-posts"> ${wholeResponse[i].content.rendered}</div>
-            <center><button class="read-more-btn">Read More</button></center>
+            <p>${wholeResponse[i].excerpt.rendered}</p>
+            <center><a href="detail.html?id=${responseJSON[i].id}"><button class="read-more-btn">Read More</button></center>
         
             `
             
