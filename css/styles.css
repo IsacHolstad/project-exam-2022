@@ -5,11 +5,22 @@
 }
 
 .swiper {
-  width: 600px;
+  width: 100%;
   height: 300px;
 }
+.swiper-wrapper{
+  width: 100%;
+
+}
+.swiper-container{
+  height: 400px;
   
-  
+}
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 figure img{
   display: flex;
@@ -115,9 +126,6 @@ h4{
   margin-bottom: 15px;
 }
 
-
-
-
 .header {
   background-color: #1fab89;
     position: absolute;
@@ -200,14 +208,7 @@ h4{
     transform: rotate(45deg);
     top: 0;
   }
-  /*
-  this 
-  is 
-  just
-  for 
-  temarary
-  spacing
-  */
+ 
   a{
     color: white;
   }
@@ -216,17 +217,67 @@ h4{
     position: absolute;
     left: 5px;
   }
- 
   
   a:hover{
     text-decoration: underline;
   }
+
   div.postcontainer{
       color: black;
       padding: 15px;
   }
   li:hover{
     text-decoration: underline;
+  }
+
+  @media screen and (min-width: 320px) and (max-width: 480px) {
+    input{
+      width: 280px;
+    }
+    figure img{
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      width: 80%;
+      height: 40%;
+      
+    }
+    h3{
+      text-decoration: none;
+      padding-bottom: 15px;
+      text-align: center;
+      padding-right: 15px;
+      font-size: 15px;
+      font-weight: 700;
+      color: black;
+    }
+    .read-more-btn{
+      height: 25px;
+      width: 80px;
+      margin-top: 15px;
+      background-color: #1FAB89  ;
+      border-radius: 10px;
+      border: 0.5px;
+      color: white;
+      font-weight: 400;
+      font-size: 10px;
+      box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+      cursor: pointer;
+    
+    }
+    
+    .search-backbox{
+      display: none;
+    }
+    div.backbox-posts{
+      width: 100%;
+      background-color: #D7FBEB;
+      color: black;
+  }
+  footer{
+    height: 100px;
+  }
+    
   }
   
   @media screen and (min-width: 700px) and (max-width:1400px) {
@@ -263,11 +314,7 @@ h4{
         font-size: 2em;
         padding: 10px 20px;
       }
-      
-
-   
-      
-     
+       
   }
 
 
@@ -280,11 +327,7 @@ ul.navigation-ul {
 .home{
     text-decoration: underline;
 }
-.carusel-container{
-    width: 100%;
-    height: 450px;
-    
-}
+
 li{
     display: inline;
     justify-content: space-between;
@@ -320,7 +363,7 @@ input{
 }
 .backbox-posts{
     width: 100%;
-    height: 40500px;
+    height: 3500px;
     background-color: #D7FBEB;
     color: black;
 
@@ -340,66 +383,4 @@ a{
   text-decoration: none;
 }
 
-  @media screen and (min-width: 320px) and (max-width: 480px) {
-    input{
-      width: 280px;
-    }
-    figure img{
-      display: flex;
-      flex-direction: column;
-      position: relative;
-      width: 60%;
-      height: 40%;
-      
-    }
-    h3{
-      text-decoration: none;
-      padding-bottom: 15px;
-      text-align: center;
-      padding-right: 15px;
-      font-size: 14px;
-      font-weight: 600;
-      color: black;
-    }
-    .read-more-btn{
-      height: 20px;
-      width: 80px;
-      margin-top: 15px;
-      background-color: #1FAB89  ;
-      border-radius: 10px;
-      border: 0.5px;
-      color: white;
-      font-weight: 400;
-      font-size: 10px;
-      box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
-      cursor: pointer;
-    
-    }
-    
-  }
-  @media screen and (min-width: 700px) and (max-width:1400px) {
-    .header li {
-        float: right;
-      }
-      .header li a {
-        padding: 15px 15px;
-      }
-      .header .menu {
-        clear: none;
-        float: right;
-        max-height: none;
-        background-color: #1fab89;
-        width: 100%;
-       position: absolute;
-       top: 0%;
-      }
-      .menu-icon {
-        display: none;
-      }
-      .header {
-        background-color: #1fab89;
 
-      }
-      
-     
-  }
