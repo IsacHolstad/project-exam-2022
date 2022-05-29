@@ -28,7 +28,8 @@ async function blogResults() {
             `
             
             //SOME ERROR WITH THIS BELOW
-            slideShowPost.innerHTML = `<center><div class="recent-top-posts"><img src="${responseJSON[i].content.rendered}</div></center>`
+            slideShowPost.innerHTML = `<div class="recent-top-posts"><a href="detail.html?id=${responseJSON[i].id}"></div>
+            <div>${wholeResponse[i].content.rendered}</div>`
         }
 
     }
