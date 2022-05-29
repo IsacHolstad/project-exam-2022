@@ -6,6 +6,10 @@ const corsFixUrl = proxy + myAPI;
 
 const blogIMG = document.querySelector(".blog-posts");
 const slideShowPost = document.querySelector(".carusel-container")
+const caruselPostOne = document.querySelector(".swiper-slide-one")
+const caruselPostTwo = document.querySelector(".swiper-slide-two")
+const caruselPostThree = document.querySelector(".swiper-slide-three")
+
 ////
 
 async function blogResults() {
@@ -26,10 +30,16 @@ async function blogResults() {
             <center><a href="detail.html?id=${responseJSON[i].id}"><button class="read-more-btn">Read More</button></center>
         
             `
-            
-            //SOME ERROR WITH THIS BELOW
-            slideShowPost.innerHTML = `<div class="recent-top-posts"><a href="detail.html?id=${responseJSON[i].id}"></div>
+            caruselPostOne.innerHTML = `<div class="recent-top-posts"><a href="detail.html?id=${responseJSON[i].id}"></div>
             <div>${wholeResponse[i].content.rendered}</div>`
+
+            caruselPostTwo.innerHTML = `<div class="recent-top-posts"><a href="detail.html?id=${responseJSON[i].id}"></div>
+            <div>${wholeResponse[i].content.rendered}</div>`
+
+            caruselPostThree.innerHTML = `<div class="recent-top-posts"><a href="detail.html?id=${responseJSON[i].id}"></div>
+            <div>${wholeResponse[i].content.rendered}</div>`
+
+
         }
 
     }
@@ -1141,8 +1151,24 @@ for (let i = 0; i < wholeResponse.length; i++) {
        
 
     }
-    ////console.log(wholeResponse[i].content.rendered)
+
 }
+const swiper = new Swiper('.swiper', {
+    loop: true,
+  
+    pagination: {
+      el: '.swiper-pagination',
+    },
+  
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    scrollbar: {
+        el: '.swiper-scrollbar',
+      },
+   
+  });
 
 
 

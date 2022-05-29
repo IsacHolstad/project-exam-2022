@@ -4,13 +4,13 @@
     font-family: 'Rubik', sans-serif;
 }
 
-.recent-top-posts{
-  align-items: center;
-  justify-content: center;
-  padding-top: 40px;
-  
-  
+.swiper {
+  width: 600px;
+  height: 300px;
 }
+  
+  
+
 figure img{
   display: flex;
   flex-direction: column;
