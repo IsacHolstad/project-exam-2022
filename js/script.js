@@ -22,7 +22,7 @@ async function blogResults() {
         ////console.log(responseJSON);
         const blogInfo = responseJSON.results;
         for (let i = 0; i < responseJSON.length; i++) {
-            //console.log(responseJSON[i])
+            
             
            
             blogIMG.innerHTML += `<div><a href="detail.html?id=${responseJSON[i].id}"></div>
