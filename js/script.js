@@ -34,7 +34,7 @@ async function blogResults() {
             <div>${wholeResponse[i].content.rendered}</div>`
 
             caruselPostTwo.innerHTML = `<div class="recent-top-posts"><a href="detail.html?id=${responseJSON[i].id}"></div>
-            <div>${wholeResponse[i].content.rendered}</div>`
+            <div>${wholeResponse[i].content.rendered}</div><h2>${responseJSON[i].title.rendered}</h2>`
 
             caruselPostThree.innerHTML = `<div class="recent-top-posts"><a href="detail.html?id=${responseJSON[i].id}"></div>
             <div>${wholeResponse[i].content.rendered}</div>`
