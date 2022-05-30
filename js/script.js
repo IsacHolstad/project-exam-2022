@@ -1,22 +1,14 @@
 const myAPI = 'https://isacblog.flywheelsites.com/wp-json/wp/v2/posts';
-//console.log(myAPI);
 const proxy = "https://noroffcors.herokuapp.com/";
 const corsFixUrl = proxy + myAPI; 
-
 
 const blogIMG = document.querySelector(".blog-posts");
 const caruselSwipe = document.querySelector(".swiper-slide");
 
-
-
-
-
 async function blogResults() {
     try{
         const response = await fetch(corsFixUrl);
-        ////console.log(response);
         const responseJSON = await response.json();
-        ////console.log(responseJSON);
         const blogInfo = responseJSON.results;
         for (let i = 0; i < responseJSON.length; i++) {
             
@@ -38,7 +30,6 @@ async function blogResults() {
     }
 }
 blogResults()
-
 
 let wholeResponse = [
     {
@@ -1123,14 +1114,11 @@ let wholeResponse = [
     }
 ];
 
-
-
-console.log(wholeResponse)
 const getImgSrc = (imgStr) => {
     const div = document.createElement('div');
     div.innerHTML = imgStr
     const img = div.querySelector('img');
-    if (img !== null) {// if it is availebal
+    if (img !== null) {
         return img.src
     }
 };
@@ -1143,18 +1131,3 @@ for (let i = 0; i < wholeResponse.length; i++) {
     }
 
 }
-const swiper = new Swiper('.swiper', {
-  
-    pagination: {
-      el: '.swiper-pagination',
-    },
-
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-
-    scrollbar: {
-      el: '.swiper-scrollbar',
-    },
-  });

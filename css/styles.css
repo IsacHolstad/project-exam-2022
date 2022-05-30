@@ -10,22 +10,7 @@ body{
   width: 40px;
   position: absolute;
 }
-.swiper {
-  width: 100%;
-  height: 500px;
-}
 
-.swiper-slide{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.swiper-slide img{
-  width: 360px;
-  margin-top: 55px;
-  justify-content: center;
-  align-items: center;
-}
 div figure img{
   display: flex;
   flex-direction: column;
@@ -288,16 +273,6 @@ h4{
     input{
       width: 280px;
     }
-    .swiper {
-      width: 100%;
-      height: 290px;
-    }
-    
-    .swiper-slide img{
-      width: 360px;
-      margin-top: 20px;
-     
-    }
     img.wp-image-156{
       justify-content: center;
       align-items: center;
@@ -528,11 +503,7 @@ h4{
         font-size: 2em;
         padding: 10px 20px;
       }
-      .swiper-slide img{
-        width: 600px;
-        margin-top: 20px;
-       
-      }
+      
       img.wp-image-156{
         justify-content: center;
         align-items: center;
