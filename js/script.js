@@ -1136,8 +1136,8 @@ const getImgSrc = (imgStr) => {
 };
 for (let i = 0; i < wholeResponse.length; i++) {
     let myImage = getImgSrc(wholeResponse[i].content.rendered)
-    if (myImage) { //check that the images are returning
-        ////console.log(myImage)
+    if (myImage) { 
+     
        
 
     }
@@ -1145,22 +1145,16 @@ for (let i = 0; i < wholeResponse.length; i++) {
 }
 const swiper = new Swiper('.swiper', {
   
-    // If we need pagination
     pagination: {
       el: '.swiper-pagination',
     },
-  
-    // Navigation arrows
+
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
     },
-  
-    // And if we need scrollbar
+
     scrollbar: {
       el: '.swiper-scrollbar',
     },
   });
-
-
-
