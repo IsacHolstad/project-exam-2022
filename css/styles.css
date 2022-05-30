@@ -3,20 +3,22 @@
     padding: 0 auto;
     font-family: 'Rubik', sans-serif;
 }
-*{box-sizing: border-box;}
+
 .carousel {
   position: relative;
+  display: flex;
+  flex-direction: column;
   width: 100%;
-  height: 270px;
+  height: 250px;
   overflow: hidden;
-  background-color: #cdcdcd;
+ 
   
     
 }
-.carousel-item {
+ .carousel-item {
   position: absolute;
   width: 100%;
-  height: 360px;
+  height: 200px;
   
   top: 0;
   left: 100%;
@@ -26,16 +28,13 @@
   left: 0;
   transition: all 0.3s ease-out;
 }
-
-
-
-
-
-
-
 .recent-top-posts{
   width: 100%;
+
+ 
+  height: 59px;
 }
+
 
 
 figure img{
@@ -292,11 +291,6 @@ h4{
  
   a{
     color: white;
-  }
-  .logo{
-    width: 40px;
-    position: absolute;
-    left: 5px;
   }
   
   a:hover{
