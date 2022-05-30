@@ -6,7 +6,9 @@ const corsFixUrl = proxy + myAPI;
 
 const blogIMG = document.querySelector(".blog-posts");
 
-const caruselPost = document.querySelector(".swiper-slide")
+const caruselPostOne = document.querySelector(".red");
+const caruselPostTwo = document.querySelector(".green")
+const caruselPostThree = document.querySelector(".yellow")
 
 
 
@@ -32,8 +34,8 @@ async function blogResults() {
             <center><a href="detail.html?id=${responseJSON[i].id}"><button class="read-more-btn">Read More</button></center>
         
             `
-           // caruselPost.innerHTML = `<div class="recent-top-posts"><a href="detail.html?id=${responseJSON[i].id}"></div>
-            //<div>${wholeResponse[i].content.rendered}</div>`
+           caruselPostOne.innerHTML = `<div class="recent-top-posts"><a href="detail.html?id=${responseJSON[i].id}"></div>
+            <div>${wholeResponse[i].content.rendered}</div>`
 
            
 
