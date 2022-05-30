@@ -8,6 +8,7 @@ body{
 }
 .logo{
   width: 40px;
+  position: absolute;
 }
 .swiper {
   width: 100%;
