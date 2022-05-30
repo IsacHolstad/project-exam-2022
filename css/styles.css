@@ -3,6 +3,9 @@
     padding: 0 auto;
     font-family: 'Rubik', sans-serif;
 }
+body{
+  background-color: #D7FBEB;
+}
 
 .carousel {
   position: relative;
@@ -11,18 +14,20 @@
   width: 100%;
   height: 250px;
   overflow: hidden;
- 
-  
     
 }
+.carusel-background{
+  width: 100%;
+  background-color: #9df3c4;
+
+}
+
  .carousel-item {
   position: absolute;
   width: 100%;
-  height: 200px;
-  
+  height: 250px;
   top: 0;
   left: 100%;
-  
 }
 .carousel-item.active {
   left: 0;
@@ -30,14 +35,9 @@
 }
 .recent-top-posts{
   width: 100%;
-
- 
   height: 59px;
 }
-
-
-
-figure img{
+div figure img{
   display: flex;
   flex-direction: column;
   position: relative;
@@ -87,13 +87,7 @@ input{
   color: black;
   
 }
-.backbox-posts{
-  width: 100%;
-  height: 3500px;
-  background-color: #D7FBEB;
-  color: black;
 
-}
 .footer{
   width: 100%;
   height: 200px;
@@ -374,6 +368,19 @@ h4{
       width: 80%;
       box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
     }
+    img.wp-image-71{
+      justify-content: center;
+      align-items: center;
+      width: 80%;
+      box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    }
+    img.wp-image-57{
+      justify-content: center;
+      align-items: center;
+      width: 80%;
+      box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    }
+
     img.wp-image-142{
       justify-content: center;
       align-items: center;
@@ -412,6 +419,9 @@ h4{
     }
     h3{
       font-weight: 700;
+    }
+    footer{
+      margin-top: 150px;
     }
     
 
@@ -509,5 +519,116 @@ h4{
       h3{
         font-weight: 700;
       }
+      footer{
+        margin-top: 200px;
+      }
        
+  }
+  @media screen and (min-width: 1401px) and (max-width:2500px) {
+   
+    .header li {
+      float: right;
+    }
+    .header li a {
+      padding: 20px 30px;
+      font-size: 16px;
+      font-weight: 400;
+    }
+    .header .menu {
+      clear: none;
+      float: right;
+      max-height: none;
+      background-color: #1fab89;
+      width: 100%;
+     position: relative;
+     top: 0%;
+    }
+    .menu-icon {
+      display: none;
+    }
+    .header {
+      background-color: #1fab89;
+      height: 58px;
+
+    }
+    .header .logo {
+      float: left;
+      display: block;
+      font-size: 2em;
+      padding: 10px 20px;
+    }
+    img.wp-image-156{
+      justify-content: center;
+      align-items: center;
+      width: 50%;
+      box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    }
+    img.wp-image-152{
+      justify-content: center;
+      align-items: center;
+      width: 50%;
+      box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    }
+    img.wp-image-147{
+      justify-content: center;
+      align-items: center;
+      width: 50%;
+      box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    }
+    img.wp-image-142{
+      justify-content: center;
+      align-items: center;
+      width: 50%;
+      box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    }
+    img.wp-image-136{
+      justify-content: center;
+      align-items: center;
+      width: 50%;
+      box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    }
+    img.wp-image-76{
+      justify-content: center;
+      align-items: center;
+      width: 50%;
+      box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    }
+    img.wp-image-70{
+      justify-content: center;
+      align-items: center;
+      width: 50%;
+      box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    }
+    img.wp-image-71{
+      justify-content: center;
+      align-items: center;
+      width: 50%;
+      box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    }
+    img.wp-image-67{
+      justify-content: center;
+      align-items: center;
+      width: 50%;
+      box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    }
+    img.wp-image-60{
+      justify-content: center;
+      align-items: center;
+      width: 50%;
+      box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    }
+    img.wp-image-57{
+      justify-content: center;
+      align-items: center;
+      width: 50%;
+      box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    }
+    h3{
+      font-weight: 700;
+    }
+    footer{
+      margin-top: 200px;
+    }
+
+
   }
