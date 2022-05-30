@@ -28,7 +28,6 @@ async function blogResults() {
             <center><a href="detail.html?id=${responseJSON[i].id}"><button class="read-more-btn">Read More</button></center>`
 
             caruselSwipe.innerHTML = `<div><a href="detail.html?id=${responseJSON[i].id}"></div>
-            <h3> ${responseJSON[i].title.rendered}</h3>
             <div class="carusel-image"> ${wholeResponse[i].content.rendered}</div>`
 
         }
