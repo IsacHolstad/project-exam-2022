@@ -6,14 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link rel="stylesheet" href="./css/styles.css">
-    <link rel="stylesheet"
-    href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
-    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js" defer></script>
     <script src="./js/script.js" defer></script>
 </head>
 <body>
     <header class="header">
         <img src="./logo/logo.png" class="logo" alt="blog logo"/>
+        
         <input class="menu-btn" type="checkbox" id="menu-btn" />
         <label class="menu-icon" for="menu-btn"><span class="nav-icon"></span></label>
         <ul class="menu">
@@ -22,29 +20,21 @@
           <li><a href="./contact.html">Contact</a></li>
         </ul>
       </header>
-      <div class="swiper">
-        <!-- Additional required wrapper -->
-        <div class="swiper-wrapper">
-          <!-- Slides -->
-          <div class="swiper-slide"></div>
-          <div class="swiper-slide"></div>
-          <div class="swiper-slide"></div>
-          ...
+        <div class="carousel">
+            <div class="carousel-item">
+            <div class="red"></div>
+            </div>
+            <div class="carousel-item">
+            <div class="green"></div>
+            </div>
+            <div class="carousel-item">
+            <div class="yellow"></div>
+            </div>
+            <div class="carousel-item">
+            <div class="violet"></div>
+            </div>
         </div>
-        <!-- If we need pagination -->
-        <div class="swiper-pagination"></div>
-      
-        <!-- If we need navigation buttons -->
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
-      
-        <!-- If we need scrollbar -->
-        <div class="swiper-scrollbar"></div>
-      </div>
-        </div>
-        <div class="search-backbox">
-           
-        </div>
+        <div class="search-backbox"></div>
         <div class="backbox-posts">
             <div class="blog-posts"></div>
         </div>

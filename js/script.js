@@ -32,8 +32,8 @@ async function blogResults() {
             <center><a href="detail.html?id=${responseJSON[i].id}"><button class="read-more-btn">Read More</button></center>
         
             `
-            caruselPost.innerHTML = `<div class="recent-top-posts"><a href="detail.html?id=${responseJSON[i].id}"></div>
-            <div>${wholeResponse[i].content.rendered}</div>`
+           // caruselPost.innerHTML = `<div class="recent-top-posts"><a href="detail.html?id=${responseJSON[i].id}"></div>
+            //<div>${wholeResponse[i].content.rendered}</div>`
 
            
 
@@ -1155,22 +1155,29 @@ for (let i = 0; i < wholeResponse.length; i++) {
     }
 
 }
-const swiper = new Swiper('.swiper', {
-    loop: true,
-  
-    pagination: {
-      el: '.swiper-pagination',
-    },
-  
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-    scrollbar: {
-        el: '.swiper-scrollbar',
-      },
-   
-  });
+window.onload = function(){
+    var slides = document.getElementsByClassName('carousel-item'),
+        addActive = function(slide) {slide.classList.add('active')},
+        removeActive = function(slide) {slide.classList.remove('active')};
+    addActive(slides[0]);
+    
+    setInterval(function (){
+      for (var i = 0; i < slides.length; i++){
+        if (i + 1 == slides.length) {
+          addActive(slides[0]);
+          slides[0].style.zIndex = 100;
+          setTimeout(removeActive, 350, slides[i]); //Doesn't be worked in IE-9
+          break;
+        }
+        if (slides[i].classList.contains('active')) { 
+          slides[i].removeAttribute('style');
+          setTimeout(removeActive, 350, slides[i]); //Doesn't be worked in IE-9
+          addActive(slides[i + 1]);
+          break;
+        }
+      } 
+    }, 4000);
+  }
 
 
 
