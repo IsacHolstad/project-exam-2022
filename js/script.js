@@ -5,6 +5,7 @@ const corsFixUrl = proxy + myAPI;
 
 
 const blogIMG = document.querySelector(".blog-posts");
+const caruselSwiper = document.querySelector(".swiper-slide");
 
 
 
@@ -24,8 +25,11 @@ async function blogResults() {
             blogIMG.innerHTML += `<div><a href="detail.html?id=${responseJSON[i].id}"></div>
             <h3> ${responseJSON[i].title.rendered}</h3>
             <div class="img-blog-posts"> ${wholeResponse[i].content.rendered}</div>
-            <p>${wholeResponse[i].excerpt.rendered}</p>
             <center><a href="detail.html?id=${responseJSON[i].id}"><button class="read-more-btn">Read More</button></center>`
+
+            caruselSwiper.innerHTML = `<div><a href="detail.html?id=${responseJSON[i].id}"></div>
+            <h3> ${responseJSON[i].title.rendered}</h3>
+            <div class="carusel-image"> ${wholeResponse[i].content.rendered}</div>`
         }
 
     }
@@ -1139,29 +1143,24 @@ for (let i = 0; i < wholeResponse.length; i++) {
     }
 
 }
-window.onload = function(){
-    var slides = document.getElementsByClassName('carousel-item'),
-        addActive = function(slide) {slide.classList.add('active')},
-        removeActive = function(slide) {slide.classList.remove('active')};
-    addActive(slides[0]);
-    
-    setInterval(function (){
-      for (var i = 0; i < slides.length; i++){
-        if (i + 1 == slides.length) {
-          addActive(slides[0]);
-          slides[0].style.zIndex = 100;
-          setTimeout(removeActive, 350, slides[i]); //Doesn't be worked in IE-9
-          break;
-        }
-        if (slides[i].classList.contains('active')) { 
-          slides[i].removeAttribute('style');
-          setTimeout(removeActive, 350, slides[i]); //Doesn't be worked in IE-9
-          addActive(slides[i + 1]);
-          break;
-        }
-      } 
-    }, 4000);
-  }
+const swiper = new Swiper('.swiper', {
+  
+    // If we need pagination
+    pagination: {
+      el: '.swiper-pagination',
+    },
+  
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  
+    // And if we need scrollbar
+    scrollbar: {
+      el: '.swiper-scrollbar',
+    },
+  });
 
 
 
