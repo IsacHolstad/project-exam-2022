@@ -6,15 +6,9 @@ const corsFixUrl = proxy + myAPI;
 
 const blogIMG = document.querySelector(".blog-posts");
 
-const caruselPostOne = document.querySelector(".red");
-const caruselPostTwo = document.querySelector(".green")
-const caruselPostThree = document.querySelector(".yellow")
 
 
 
-
-
-////
 
 async function blogResults() {
     try{
@@ -31,31 +25,7 @@ async function blogResults() {
             <h3> ${responseJSON[i].title.rendered}</h3>
             <div class="img-blog-posts"> ${wholeResponse[i].content.rendered}</div>
             <p>${wholeResponse[i].excerpt.rendered}</p>
-            <center><a href="detail.html?id=${responseJSON[i].id}"><button class="read-more-btn">Read More</button></center>
-        
-            `
-           caruselPostOne.innerHTML = `<div class="recent-top-posts"><a href="detail.html?id=${responseJSON[i].id}"></div>
-           <h3>${responseJSON[i].title.rendered}</h3>
-            <div>${wholeResponse[i].content.rendered}</div>
-           `
-
-            caruselPostTwo.innerHTML = `<div class="recent-top-posts"><a href="detail.html?id=${responseJSON[i].id}"></div>
-            <h3>${responseJSON[i].title.rendered}</h3>
-            <div>${wholeResponse[i].content.rendered}</div>
-           `
-
-            caruselPostThree.innerHTML = `<div class="recent-top-posts"><a href="detail.html?id=${responseJSON[i].id}"></div>
-            <h3>${responseJSON[i].title.rendered}</h3>
-            <div>${wholeResponse[i].content.rendered}</div>
-           `
-
-           
-
-            
-
-           
-
-
+            <center><a href="detail.html?id=${responseJSON[i].id}"><button class="read-more-btn">Read More</button></center>`
         }
 
     }

@@ -7,36 +7,8 @@ body{
   background-color: #D7FBEB;
 }
 
-.carousel {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: 250px;
-  overflow: hidden;
-    
-}
-.carusel-background{
-  width: 100%;
-  background-color: #9df3c4;
 
-}
-
- .carousel-item {
-  position: absolute;
-  width: 100%;
-  height: 250px;
-  top: 0;
-  left: 100%;
-}
-.carousel-item.active {
-  left: 0;
-  transition: all 0.3s ease-out;
-}
-.recent-top-posts{
-  width: 100%;
-  height: 59px;
-}
+ 
 div figure img{
   display: flex;
   flex-direction: column;
@@ -465,55 +437,67 @@ h4{
       img.wp-image-156{
         justify-content: center;
         align-items: center;
-        width: 80%;
+        width: 70%;
         box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
       }
       img.wp-image-152{
         justify-content: center;
         align-items: center;
-        width: 80%;
+        width: 70%;
         box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
       }
       img.wp-image-147{
         justify-content: center;
         align-items: center;
-        width: 80%;
+        width: 70%;
         box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
       }
       img.wp-image-142{
         justify-content: center;
         align-items: center;
-        width: 80%;
+        width: 70%;
         box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
       }
       img.wp-image-136{
         justify-content: center;
         align-items: center;
-        width: 80%;
+        width: 70%;
         box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
       }
       img.wp-image-76{
         justify-content: center;
         align-items: center;
-        width: 80%;
+        width: 70%;
         box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
       }
       img.wp-image-70{
         justify-content: center;
         align-items: center;
-        width: 80%;
+        width: 70%;
         box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
       }
       img.wp-image-67{
         justify-content: center;
         align-items: center;
-        width: 90%;
+        width: 70%;
         box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
       }
       img.wp-image-60{
         justify-content: center;
         align-items: center;
-        width: 80%;
+        width: 70%;
+        box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+      }
+      img.wp-image-71{
+        justify-content: center;
+        align-items: center;
+        width: 70%;
+        box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+      }
+      img.wp-image-57{
+        justify-content: center;
+        align-items: center;
+        width: 70%;
         box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
       }
       h3{
