@@ -8,9 +8,6 @@ a{
   color: white;
 }
 
-
-
-
 .logo{
   width: 40px;
 }
@@ -107,8 +104,8 @@ a:hover{
   .blog-post{
     position: relative;
     top: 155px;
-    width: 40%;
-    height: 40%;
+    width: 100%;
+    height: 30%;
   }
   .img{
     position: relative;
@@ -116,14 +113,31 @@ a:hover{
     width: 70%;
     height: 50%;
   }
+  .blog-data{
+    width: 500px;
+    
+  }
   .footer{
     width: 100%;
+    padding-top: 15px;
     height: 150px;
     color: white;
     text-align: center;
     margin-top: 150px;
     background-color: black;
   }
+  p{
+    display: none;
+  }
+  @media screen and (min-width: 320px) and (max-width:480px) {
+    
+    figure{
+      width: 100%;
+      background-color: red;
+    }
+
+  }
+
   @media screen and (min-width: 700px) and (max-width:1400px) {
     .header li {
         float: right;

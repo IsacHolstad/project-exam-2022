@@ -9,7 +9,7 @@ const proxy = "https://noroffcors.herokuapp.com/";
 const corsFixUrl = proxy + ApiUrl;
 //console.log(corsFixUrl);
 
-const detailPost = document.querySelector(".blog-post");
+const detailPost = document.querySelector(".blog-data");
 
 ///
 async function getData() {
