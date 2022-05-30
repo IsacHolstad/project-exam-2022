@@ -183,28 +183,7 @@ a:hover{
   }
 
   @media screen and (min-width: 481px) and (max-width:700px) {
-    .header li {
-        float: right;
-      }
-      .header li a {
-        padding: 20px 30px;
-      }
-      .header .menu {
-        clear: none;
-        float: right;
-        max-height: none;
-        background-color: #1fab89;
-        width: 100%;
-       position: absolute;
-       top: 0%;
-      }
-      .menu-icon {
-        display: none;
-      }
-      .header {
-        background-color: #1fab89;
-
-      }
+    
         
     .img{
       position: relative;
@@ -221,8 +200,8 @@ a:hover{
       text-align: center;
     }
     .blog-post img{
-      width: 400px;
-      height: 300px;
+      width: 450px;
+      height: 310px;
       margin-top: 8px;
       margin-bottom: 8px;
       border-radius: 5px;
